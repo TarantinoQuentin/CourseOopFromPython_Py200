@@ -11,14 +11,14 @@ class Glass:
         self.init_occupied_volume(occupied_volume)
 
     # TODO создать метод init_capacity_volume, который будет инициализировать атрибут capacity_volume
-    def init_capacity_volume(self, capacity_volume):
+    def init_capacity_volume(self, capacity_volume: int | float):
         if not isinstance(capacity_volume, (int, float)):
             raise TypeError
         if not capacity_volume > 0:
             raise ValueError
         self.capacity_volume = capacity_volume
 
-    def init_occupied_volume(self, occupied_volume):
+    def init_occupied_volume(self, occupied_volume: int | float):
         if not isinstance(occupied_volume, (int, float)):
             raise TypeError
         if occupied_volume < 0:

@@ -21,7 +21,6 @@ class Glass:
             raise ValueError("Не должно быть отрицательных значений")
         if occupied_volume > capacity_volume:
             raise ValueError("Налить в стакан больше того, что возможно нельзя")
-
         self.occupied_volume = occupied_volume  # объем жидкости в стакане
 
 

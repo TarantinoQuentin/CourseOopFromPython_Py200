@@ -3,7 +3,7 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 898
+      - offset: 937
         length: 408
         placeholder_text: "...  # TODO Допишите метод. Не забываем про проверки"
         initial_state:
@@ -20,7 +20,7 @@ files:
                   self.occupied_volume += volume
         selected: true
         status: Solved
-      - offset: 1352
+      - offset: 1404
         length: 358
         placeholder_text: "...  # TODO Допишите метод. Не забываем про проверки"
         initial_state:
@@ -37,7 +37,7 @@ files:
                   self.occupied_volume -= volume
         selected: true
         status: Solved
-      - offset: 1773
+      - offset: 1825
         length: 19
         placeholder_text: "# TODO Добавьте 50 единиц воды через метод"
         initial_state:
@@ -47,7 +47,7 @@ files:
         encrypted_possible_answer: glass.add_water(50)
         selected: true
         status: Solved
-      - offset: 1913
+      - offset: 1965
         length: 23
         placeholder_text: "# TODO  Отлейте 100 единиц воды из стакана при помощи метод\
       а"

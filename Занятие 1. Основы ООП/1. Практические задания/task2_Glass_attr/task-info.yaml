@@ -3,7 +3,7 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 1176
+      - offset: 1175
         length: 91
         placeholder_text: "# TODO инициализировать ещё один стакан со значениями 200,\
       \ 150"
@@ -14,7 +14,7 @@ files:
         encrypted_possible_answer: "glass2 = Glass(200, 150)"
         selected: false
         status: Solved
-      - offset: 1272
+      - offset: 1271
         length: 136
         placeholder_text: "# TODO  распечатать атрибут capacity_volume, occupied_volume\
       \ экземпляра glass2"
@@ -25,7 +25,7 @@ files:
         encrypted_possible_answer: "print(glass2.capacity_volume, glass2.occupied_volume)"
         selected: false
         status: Solved
-      - offset: 1460
+      - offset: 1459
         length: 146
         placeholder_text: "# TODO доливаем 50 единиц воды в первый стакан (за счет доб\
       авления значения к значению соответствующего атрибута)"
@@ -36,7 +36,7 @@ files:
         encrypted_possible_answer: glass1.occupied_volume += 50
         selected: true
         status: Solved
-      - offset: 1989
+      - offset: 1988
         length: 24
         placeholder_text: '...'
         initial_state:

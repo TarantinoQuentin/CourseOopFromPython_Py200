@@ -36,9 +36,9 @@ files:
                   if not capacity_volume > 0:
                       raise ValueError
                   self.capacity_volume = capacity_volume  # объем стакана
-        selected: false
+        selected: true
         status: Solved
-      - offset: 1093
+      - offset: 1119
         length: 15
         placeholder_text: "...  # TODO инициализировать экземпляр класса Glass с объем\
       ом 200 и количеством жидкости 100"
@@ -49,7 +49,7 @@ files:
         encrypted_possible_answer: "Glass(200, 100)"
         selected: true
         status: Solved
-      - offset: 1120
+      - offset: 1146
         length: 66
         placeholder_text: "...)  # TODO распечатать атрибут capacity_volume"
         initial_state:
@@ -59,7 +59,7 @@ files:
         encrypted_possible_answer: glass.capacity_volume)
         selected: false
         status: Solved
-      - offset: 1197
+      - offset: 1223
         length: 66
         placeholder_text: "...)  # TODO распечатать атрибут occupied_volume"
         initial_state:
