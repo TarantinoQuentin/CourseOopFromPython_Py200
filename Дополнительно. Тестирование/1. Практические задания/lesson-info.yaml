@@ -1,0 +1,14 @@
+content:
+  - task1_simple_test
+  - task2_foo
+  - task3_error
+  - task4_tests
+  - task5_1_method
+  - task5_2
+  - task6_class
+  - task7_module
+  - task8_passed
+  - task9_coverage_1
+  - task9_coverage_2
+  - task9_coverage_3
+  - task10_BankAccount

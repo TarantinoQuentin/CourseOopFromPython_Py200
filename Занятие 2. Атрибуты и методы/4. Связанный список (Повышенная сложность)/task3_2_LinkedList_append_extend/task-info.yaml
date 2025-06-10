@@ -1,0 +1,69 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 515
+        length: 44
+        placeholder_text: "...  # TODO создайте узел со значением value"
+        initial_state:
+          length: 44
+          offset: 515
+        initialized_from_dependency: false
+        encrypted_possible_answer: Node(value)
+        selected: false
+        status: Unchecked
+      - offset: 667
+        length: 49
+        placeholder_text: "...  # TODO установите головной узел как new_node"
+        initial_state:
+          length: 49
+          offset: 667
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.head = append_node
+        selected: false
+        status: Unchecked
+      - offset: 753
+        length: 46
+        placeholder_text: "...  # TODO установить значение головного узла"
+        initial_state:
+          length: 46
+          offset: 753
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.head
+        selected: false
+        status: Unchecked
+      - offset: 923
+        length: 65
+        placeholder_text: "...  # TODO как текущее значение используем соседа (current.next)"
+        initial_state:
+          length: 65
+          offset: 923
+        initialized_from_dependency: false
+        encrypted_possible_answer: current.next
+        selected: false
+        status: Unchecked
+      - offset: 1306
+        length: 59
+        placeholder_text: "...  # TODO реализуйте добавления элементов в конец в цикле"
+        initial_state:
+          length: 59
+          offset: 1306
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          for item in iterable:
+                      self.append(item)
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

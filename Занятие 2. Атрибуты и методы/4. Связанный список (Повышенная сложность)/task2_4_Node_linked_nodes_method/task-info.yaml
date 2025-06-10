@@ -1,0 +1,35 @@
+type: output
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 1401
+        length: 90
+        placeholder_text: "# TODO реализовать функцию (в левую ноду устанавливаем ссыл\
+      ку через соответствующий метод)"
+        initial_state:
+          length: 90
+          offset: 1401
+        initialized_from_dependency: false
+        encrypted_possible_answer: left_node.set_next(right_node)
+        selected: false
+        status: Unchecked
+      - offset: 1577
+        length: 66
+        placeholder_text: "# TODO связать между собой два узла с помощью функции linked_nodes"
+        initial_state:
+          length: 66
+          offset: 1577
+        initialized_from_dependency: false
+        encrypted_possible_answer: "linked_nodes(first_node, second_node)"
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

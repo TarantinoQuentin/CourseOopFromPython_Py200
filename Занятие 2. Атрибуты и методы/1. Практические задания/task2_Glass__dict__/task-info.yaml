@@ -1,0 +1,36 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 144
+        length: 71
+        placeholder_text: "# TODO Распечатайте словарь атрибутов экземпляра класса в н\
+      ачале метода"
+        initial_state:
+          length: 71
+          offset: 144
+        initialized_from_dependency: false
+        encrypted_possible_answer: print(self.__dict__)
+        selected: false
+        status: Unchecked
+      - offset: 363
+        length: 70
+        placeholder_text: "# TODO Распечатайте словарь атрибутов экземпляра класса в к\
+      онце метода"
+        initial_state:
+          length: 70
+          offset: 363
+        initialized_from_dependency: false
+        encrypted_possible_answer: print(self.__dict__)
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

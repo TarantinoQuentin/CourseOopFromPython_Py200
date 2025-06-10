@@ -1,0 +1,68 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 237
+        length: 29
+        placeholder_text: "# TODO определить конструктор"
+        initial_state:
+          length: 29
+          offset: 237
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __init__(self, a, b):
+                  self.a = a
+                  self.b = b
+        selected: false
+        status: Unchecked
+      - offset: 272
+        length: 94
+        placeholder_text: "# TODO перегрузить метод area, чтобы он возвращал площадь,\
+      \ но не терял родительский функционал"
+        initial_state:
+          length: 94
+          offset: 272
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def area(self):
+                  super().area()
+                  return round(self.a * self.b, 3)
+        selected: false
+        status: Unchecked
+      - offset: 432
+        length: 29
+        placeholder_text: "# TODO определить конструктор"
+        initial_state:
+          length: 29
+          offset: 432
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __init__(self, a):
+                  self.a = a
+        selected: false
+        status: Unchecked
+      - offset: 467
+        length: 95
+        placeholder_text: |-
+          # TODO перегрузить метод area, чтобы он возвращал площадь,
+          но не терял родительский функционал"
+        initial_state:
+          length: 95
+          offset: 467
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def area(self):
+                  super().area()
+                  return round(self.a * self.a * math.pi, 3)
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

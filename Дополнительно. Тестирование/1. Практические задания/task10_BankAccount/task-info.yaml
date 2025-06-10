@@ -1,0 +1,95 @@
+type: theory
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 1169
+        length: 59
+        placeholder_text: "# TODO проверьте что в атрибут баланса всё верно записалось"
+        initial_state:
+          length: 59
+          offset: 1169
+        initialized_from_dependency: false
+        encrypted_possible_answer: "self.assertEqual(account.get_balance(), 1000)"
+        selected: false
+        status: Unchecked
+      - offset: 1327
+        length: 91
+        placeholder_text: "# TODO добавьте 500 единиц к балансу и проверьте что в атри\
+      бут баланса всё верно записалось"
+        initial_state:
+          length: 91
+          offset: 1327
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          account.deposit(500)
+                  self.assertEqual(account.get_balance(), 1500)
+        selected: false
+        status: Unchecked
+      - offset: 1517
+        length: 76
+        placeholder_text: "# TODO проверьте что вызывается ошибка при добавлении отриц\
+      ательного баланса"
+        initial_state:
+          length: 76
+          offset: 1517
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          with self.assertRaises(ValueError):
+                      account.deposit(-500)
+        selected: false
+        status: Unchecked
+      - offset: 1694
+        length: 80
+        placeholder_text: "# TODO снимите 500 единиц и проверьте что в атрибут баланса\
+      \ всё верно записалось"
+        initial_state:
+          length: 80
+          offset: 1694
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          account.withdraw(500)
+                  self.assertEqual(account.get_balance(), 500)
+        selected: false
+        status: Unchecked
+      - offset: 1877
+        length: 55
+        placeholder_text: "# TODO проверьте, что нельзя снять 1500 единиц со счета"
+        initial_state:
+          length: 55
+          offset: 1877
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          with self.assertRaises(ValueError):
+                      account.withdraw(1500)
+        selected: false
+        status: Unchecked
+      - offset: 2040
+        length: 45
+        placeholder_text: "# TODO проверьте, что нельзя снять 0 со счета"
+        initial_state:
+          length: 45
+          offset: 2040
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          with self.assertRaises(ValueError):
+                      account.withdraw(0)
+        selected: false
+        status: Unchecked
+      - offset: 2175
+        length: 55
+        placeholder_text: "# TODO  проверьте доступность получения номера аккаунта"
+        initial_state:
+          length: 55
+          offset: 2175
+        initialized_from_dependency: false
+        encrypted_possible_answer: "self.assertEqual(account.get_account_number(), '12345')"
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,63 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 1176
+        length: 91
+        placeholder_text: "# TODO инициализировать ещё один стакан со значениями 200,\
+      \ 150"
+        initial_state:
+          length: 62
+          offset: 1176
+        initialized_from_dependency: false
+        encrypted_possible_answer: "glass2 = Glass(200, 150)"
+        selected: false
+        status: Solved
+      - offset: 1272
+        length: 136
+        placeholder_text: "# TODO  распечатать атрибут capacity_volume, occupied_volume\
+      \ экземпляра glass2"
+        initial_state:
+          length: 78
+          offset: 1243
+        initialized_from_dependency: false
+        encrypted_possible_answer: "print(glass2.capacity_volume, glass2.occupied_volume)"
+        selected: false
+        status: Solved
+      - offset: 1460
+        length: 146
+        placeholder_text: "# TODO доливаем 50 единиц воды в первый стакан (за счет доб\
+      авления значения к значению соответствующего атрибута)"
+        initial_state:
+          length: 113
+          offset: 1373
+        initialized_from_dependency: false
+        encrypted_possible_answer: glass1.occupied_volume += 50
+        selected: true
+        status: Solved
+      - offset: 1989
+        length: 24
+        placeholder_text: '...'
+        initial_state:
+          length: 3
+          offset: 1869
+        initialized_from_dependency: false
+        encrypted_possible_answer: id(glass1) == id(glass2)
+        selected: true
+        status: Solved
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 10 Jun 2025 15:51:21 UTC"
+record: -1

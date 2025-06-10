@@ -1,0 +1,14 @@
+content:
+  - task1_system_user_attr
+  - task2_Glass__dict__
+  - task3_Glass__class__
+  - task4_Glass__str__
+  - task5_Glass__repr__
+  - task6_Glass__class__name__
+  - task7_Date
+  - task8_Counting_dogs
+  - task9_Counting_dogs_update
+  - task10_Calculator
+  - task11_Date_update
+  - task12_create_attr
+  - task13_Store_and_sales_accounting

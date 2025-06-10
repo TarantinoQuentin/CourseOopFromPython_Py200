@@ -1,0 +1,44 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 459
+        length: 77
+        placeholder_text: "...  # TODO обернуть все значения в класс Node и поместить\
+      \ их в python список"
+        initial_state:
+          length: 77
+          offset: 459
+        initialized_from_dependency: false
+        encrypted_possible_answer: "[Node(value) for value in data]"
+        selected: false
+        status: Unchecked
+      - offset: 546
+        length: 46
+        placeholder_text: "# TODO составьте алгоритм, который свяжет узлы"
+        initial_state:
+          length: 46
+          offset: 546
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          for pair in pairwise(self.list_nodes):
+                      self.linked_nodes(*pair)
+          
+                  # или так
+                  # for idx, node in enumerate(self.list_nodes[:-1]):
+                  #     self.linked_nodes(node, self.list_nodes[idx + 1])
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

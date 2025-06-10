@@ -1,0 +1,108 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 2835
+        length: 28
+        placeholder_text: "...  # TODO реализуйте метод"
+        initial_state:
+          length: 28
+          offset: 2835
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if index < 0:
+                      index = 0
+                  elif index > self.len:
+                      index = self.len
+          
+                  new_node = Node(value)
+          
+                  if index == 0:
+                      # Вставка в начало списка
+                      new_node.next = self.head
+                      self.head = new_node
+                  else:
+                      # Вставка в середину или конец списка
+                      prev_node = self.step_by_step_on_nodes(index - 1)
+                      self.linked_nodes(new_node, prev_node.next)
+                      self.linked_nodes(prev_node, new_node)
+          
+                  self.len += 1
+        selected: false
+        status: Unchecked
+      - offset: 2986
+        length: 28
+        placeholder_text: "...  # TODO реализуйте метод"
+        initial_state:
+          length: 28
+          offset: 2986
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          current = self.head
+                  for i in range(self.len):
+                      if current.value == value:
+                          return i
+                      current = current.next
+                  raise ValueError(f"{value} не содержится в списке")
+        selected: false
+        status: Unchecked
+      - offset: 3134
+        length: 28
+        placeholder_text: "...  # TODO реализуйте метод"
+        initial_state:
+          length: 28
+          offset: 3134
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          current = self.head
+                  count = 0
+                  while current is not None:
+                      if current.value == value:
+                          count += 1
+                      current = current.next
+                  return count
+        selected: false
+        status: Unchecked
+      - offset: 3369
+        length: 28
+        placeholder_text: "...  # TODO реализуйте метод"
+        initial_state:
+          length: 28
+          offset: 3369
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if index is None:
+                      index = self.len - 1  # Удаляем последний элемент
+                  if not 0 <= index < self.len:
+                      raise IndexError('Выход за допустимые границы')
+          
+                  if index == 0:
+                      # Удаление первого узла
+                      value = self.head.value
+                      self.head = self.head.next
+                  else:
+                      # Удаление узла из середины или конца списка
+                      prev_node = self.step_by_step_on_nodes(index - 1)
+                      value = prev_node.next.value
+                      prev_node.set_next(prev_node.next.next)
+          
+                  self.len -= 1
+                  return value
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,5 @@
+Counter value: 1
+Counter value: 2
+Counter value: 3
+Counter value: 0
+property 'value' of 'Counter' object has no setter

@@ -1,0 +1,75 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 898
+        length: 408
+        placeholder_text: "...  # TODO Допишите метод. Не забываем про проверки"
+        initial_state:
+          length: 52
+          offset: 898
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(volume, (int, float)):
+                      raise TypeError
+                  if volume < 0:
+                      raise ValueError("Мы доливаем, а не отливаем")
+                  if self.occupied_volume + volume > self.capacity_volume:
+                      raise ValueError("Так перельём")
+                  self.occupied_volume += volume
+        selected: true
+        status: Solved
+      - offset: 1352
+        length: 358
+        placeholder_text: "...  # TODO Допишите метод. Не забываем про проверки"
+        initial_state:
+          length: 52
+          offset: 996
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(volume, (int, float)):
+                      raise TypeError
+                  if volume < 0:
+                      raise ValueError("Мы отливаем, а не доливаем")
+                  if self.occupied_volume - volume < 0:
+                      raise ValueError("Вылить уже нечего")
+                  self.occupied_volume -= volume
+        selected: true
+        status: Solved
+      - offset: 1773
+        length: 19
+        placeholder_text: "# TODO Добавьте 50 единиц воды через метод"
+        initial_state:
+          length: 42
+          offset: 1111
+        initialized_from_dependency: false
+        encrypted_possible_answer: glass.add_water(50)
+        selected: true
+        status: Solved
+      - offset: 1913
+        length: 23
+        placeholder_text: "# TODO  Отлейте 100 единиц воды из стакана при помощи метод\
+      а"
+        initial_state:
+          length: 60
+          offset: 1274
+        initialized_from_dependency: false
+        encrypted_possible_answer: glass.remove_water(100)
+        selected: true
+        status: Solved
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 10 Jun 2025 16:13:15 UTC"
+record: -1

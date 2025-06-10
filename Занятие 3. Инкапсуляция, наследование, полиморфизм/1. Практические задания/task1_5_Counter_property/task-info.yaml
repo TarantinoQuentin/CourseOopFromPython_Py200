@@ -1,0 +1,64 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 267
+        length: 126
+        placeholder_text: |-
+          # TODO перепишите get_value и сделайте его свойством (getter) value
+              def get_value(self) -> int:
+                  return self._value
+        initial_state:
+          length: 126
+          offset: 267
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def value(self) -> int:
+                  return self._value
+        selected: false
+        status: Unchecked
+      - offset: 399
+        length: 44
+        placeholder_text: "# TODO  напишите свойство (getter) max_value"
+        initial_state:
+          length: 44
+          offset: 399
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def max_value(self):
+                  return self._max_value
+        selected: false
+        status: Unchecked
+      - offset: 449
+        length: 83
+        placeholder_text: "# TODO  напишите свойство (setter) max_value с проверками н\
+      а входной тип и значение"
+        initial_state:
+          length: 83
+          offset: 449
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @max_value.setter
+              def max_value(self, value: int):
+                  if not isinstance(value, int):
+                      raise TypeError()
+                  if value < 1:
+                      raise ValueError()
+                  self._max_value = value
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

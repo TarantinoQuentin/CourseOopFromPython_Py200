@@ -1,0 +1,24 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 202
+        length: 60
+        placeholder_text: "# TODO вызвать конструктор базового класса с помощью super()"
+        initial_state:
+          length: 60
+          offset: 202
+        initialized_from_dependency: false
+        encrypted_possible_answer: super().__init__(name)
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

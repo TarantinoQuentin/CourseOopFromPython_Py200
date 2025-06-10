@@ -1,0 +1,4 @@
+01/01/2021
+11/10/1999
+Date(day=1, month=1, year=2021) Date(day=11, month=10, year=1999)
+Верный вызов TypeError

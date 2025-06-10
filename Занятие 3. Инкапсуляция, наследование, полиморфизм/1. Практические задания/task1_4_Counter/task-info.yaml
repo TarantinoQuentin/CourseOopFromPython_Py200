@@ -1,0 +1,41 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 157
+        length: 26
+        placeholder_text: "...  # TODO допишите метод"
+        initial_state:
+          length: 26
+          offset: 157
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if self._value < self._max_value:
+                      self._value += 1
+                  else:
+                      self._value = 0
+        selected: false
+        status: Unchecked
+      - offset: 225
+        length: 26
+        placeholder_text: "...  # TODO допишите метод"
+        initial_state:
+          length: 26
+          offset: 225
+        initialized_from_dependency: false
+        encrypted_possible_answer: return self._value
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

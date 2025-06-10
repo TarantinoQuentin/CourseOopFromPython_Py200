@@ -1,0 +1,57 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 506
+        length: 43
+        placeholder_text: "...  # TODO реализуйте метод как в описании"
+        initial_state:
+          length: 43
+          offset: 506
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if self.is_broken:
+                      raise ValueError("Копилка разбита. Нельзя добавить монеты.")
+                  self.coins.append(coin)
+        selected: false
+        status: Unchecked
+      - offset: 774
+        length: 43
+        placeholder_text: "...  # TODO реализуйте метод как в описании"
+        initial_state:
+          length: 43
+          offset: 774
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if self.is_broken:
+                      raise ValueError("Копилка уже разбита.")
+          
+                  total_amount = sum(coin.denomination for coin in self.coins)
+                  coin_count = {}
+          
+                  for coin in self.coins:
+                      if coin.denomination in coin_count:
+                          coin_count[coin.denomination] += 1
+                      else:
+                          coin_count[coin.denomination] = 1
+          
+                  self.coins = []
+                  self.is_broken = True
+          
+                  print(f"Общая сумма монет: {total_amount}")
+                  return coin_count
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

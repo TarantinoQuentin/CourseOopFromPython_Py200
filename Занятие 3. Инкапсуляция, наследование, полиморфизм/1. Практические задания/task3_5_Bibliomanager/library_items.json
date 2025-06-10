@@ -1,0 +1,97 @@
+[
+    {
+        "type": "Книга",
+        "title": "Война и мир",
+        "author": "Лев Толстой",
+        "genre": "Роман",
+        "publication_year": 1869
+    },
+    {
+        "type": "Книга",
+        "title": "Гарри Поттер",
+        "author": "Дж. К. Роулинг",
+        "genre": "Фэнтези",
+        "publication_year": 1997
+    },
+    {
+        "type": "Книга",
+        "title": "1984",
+        "author": "Джордж Оруэлл",
+        "genre": "Антиутопия",
+        "publication_year": 1949
+    },
+    {
+        "type": "Книга",
+        "title": "Преступление и наказание",
+        "author": "Федор Достоевский",
+        "genre": "Роман",
+        "publication_year": 1866
+    },
+    {
+        "type": "Книга",
+        "title": "Мастер и Маргарита",
+        "author": "Михаил Булгаков",
+        "genre": "Мистический роман",
+        "publication_year": 1966
+    },
+    {
+        "type": "Журнал",
+        "title": "National Geographic",
+        "issue_number": 10,
+        "publication_year": 2023
+    },
+    {
+        "type": "Журнал",
+        "title": "Time",
+        "issue_number": 12,
+        "publication_year": 2023
+    },
+    {
+        "type": "Журнал",
+        "title": "Forbes",
+        "issue_number": 5,
+        "publication_year": 2023
+    },
+    {
+        "type": "Журнал",
+        "title": "Вокруг света",
+        "issue_number": 8,
+        "publication_year": 2023
+    },
+    {
+        "type": "Журнал",
+        "title": "Popular Science",
+        "issue_number": 11,
+        "publication_year": 2023
+    },
+    {
+        "type": "Газета",
+        "title": "The New York Times",
+        "publication_date": "01.09.2023",
+        "publication_year": 2023
+    },
+    {
+        "type": "Газета",
+        "title": "The Guardian",
+        "publication_date": "01.09.2023",
+        "publication_year": 2023
+    },
+    {
+        "type": "Газета",
+        "title": "Коммерсант",
+        "publication_date": "01.09.2023",
+        "publication_year": 2023
+    },
+    {
+        "type": "Газета",
+        "title": "Известия",
+        "publication_date": "01.09.2023",
+        "publication_year": 2023
+    },
+    {
+        "type": "Газета",
+        "title": "The Washington Post",
+        "publication_date": "01.09.2023",
+        "publication_year": 2023
+    }
+]

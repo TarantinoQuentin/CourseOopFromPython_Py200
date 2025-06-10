@@ -1,0 +1,65 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 3575
+        length: 23
+        placeholder_text: "# TODO реализуйте метод"
+        initial_state:
+          length: 23
+          offset: 3575
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if isinstance(other, Node):
+                      self.append(other.value)
+                  elif isinstance(other, LinkedList):
+                      for node in other:
+                          self.append(node)
+                  else:
+                      raise TypeError("Можно добавлять только Node или LinkedList.")
+          
+                  return self
+        selected: false
+        status: Unchecked
+      - offset: 3840
+        length: 23
+        placeholder_text: "# TODO реализуйте метод"
+        initial_state:
+          length: 23
+          offset: 3840
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          current = self.head
+                  prev = None
+          
+                  while current is not None:
+                      if current.value == node.value:
+                          if prev is None:
+                              # Удаляемый узел - голова списка
+                              self.head = current.next
+                          else:
+                              prev.next = current.next
+                          self.len -= 1
+                          return self
+                      prev = current
+                      current = current.next
+          
+                  raise ValueError(f"Node со значением {node.value} не найдена в списке.")
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,67 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 315
+        length: 0
+        placeholder_text: "# TODO создайте атрибут capacity_volume и occupied_volume О\
+      бязательно проверяйте типы (TypeError) и значения передаваемых аргументов (ValueError)"
+        initial_state:
+          length: 145
+          offset: 324
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(capacity_volume, (int, float)):
+                      raise TypeError("Тип должен быть или int или float")
+                  if not capacity_volume > 0:
+                      raise ValueError("Объем стакана должен быть больше 0")
+                  self.capacity_volume = capacity_volume  # объем стакана
+          
+                  if not isinstance(occupied_volume, (int, float)):
+                      raise TypeError("Тип должен быть или int или float")
+                  if occupied_volume < 0:
+                      raise ValueError("Не должно быть отрицательных значений")
+                  if occupied_volume > capacity_volume:
+                      raise ValueError("Налить в стакан больше того, что возможно нельзя")
+          
+                  self.occupied_volume = occupied_volume  # объем жидкости в стакане
+        selected: true
+        status: Solved
+      - offset: 965
+        length: 0
+        placeholder_text: "# TODO инициализировать два объекта от класса Стакан (Glass)"
+        initial_state:
+          length: 60
+          offset: 503
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          glass1 = Glass(200, 100)
+              glass2 = Glass(200, 150)
+        selected: true
+        status: Solved
+      - offset: 1046
+        length: 80
+        placeholder_text: "...  # TODO инициализировать не корректные объекты"
+        initial_state:
+          length: 50
+          offset: 582
+        initialized_from_dependency: false
+        encrypted_possible_answer: "Glass(-200, 100)"
+        selected: true
+        status: Solved
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 10 Jun 2025 15:45:18 UTC"
+record: -1

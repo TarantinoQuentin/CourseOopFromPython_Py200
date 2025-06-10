@@ -1,0 +1,27 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 230
+        length: 45
+        placeholder_text: "# TODO  Обновите классовый атрибут total_dogs"
+        initial_state:
+          length: 45
+          offset: 230
+        initialized_from_dependency: false
+        encrypted_possible_answer: cls.total_dogs += count
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

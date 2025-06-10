@@ -1,0 +1,8 @@
+content:
+  - task1_Glass__init__
+  - task2_Glass_attr
+  - task3_Glass_method_outside_init
+  - task4_Glass_add_method
+  - task5_Glass_doctest
+  - task6_Pen_many_class
+  - task7_PiggyBank

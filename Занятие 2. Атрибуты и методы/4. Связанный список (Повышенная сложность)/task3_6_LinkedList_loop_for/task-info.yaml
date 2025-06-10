@@ -1,0 +1,63 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 4183
+        length: 49
+        placeholder_text: "# TODO добавьте метод __iter__ из описания задачи"
+        initial_state:
+          length: 49
+          offset: 4183
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __iter__(self):
+                  """Инициализирует итератор и возвращает его."""
+                  print("Вызов метода __iter__")
+                  self.current_node = self.head
+                  return self
+        selected: false
+        status: Unchecked
+      - offset: 4238
+        length: 49
+        placeholder_text: "# TODO добавьте метод __next__ из описания задачи"
+        initial_state:
+          length: 49
+          offset: 4238
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __next__(self):
+                  """Возвращает следующий элемент при итерации."""
+                  print("Вызов метода __next__")
+                  if self.current_node is None:  # Если больше нет элементов
+                      raise StopIteration
+                  current_value = self.current_node.value  # Получаем значение текущего узла
+                  self.current_node = self.current_node.next  # Переходим на следующий узел
+                  return current_value
+        selected: false
+        status: Unchecked
+      - offset: 4403
+        length: 77
+        placeholder_text: "# TODO с помощью цикла for распечатать в столбик все значен\
+      ия связного списка"
+        initial_state:
+          length: 77
+          offset: 4403
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          for node in linked_list:
+                  print(node)
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

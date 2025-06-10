@@ -1,0 +1,32 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 163
+        length: 91
+        placeholder_text: "# TODO сделайте так, чтобы __repr__ сам подстраивался под а\
+      трибуты что есть у него в классе"
+        initial_state:
+          length: 91
+          offset: 163
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          data = self.__class__.__name__+'('
+                  for attr, value in self.__dict__.items():
+                      data += attr + '=' + repr(value) + ', '
+                  return data[:-2] + ')'
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

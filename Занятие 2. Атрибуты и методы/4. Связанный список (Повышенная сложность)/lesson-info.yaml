@@ -1,0 +1,21 @@
+content:
+  - task1_1_LinkedList
+  - task1_2_DoublyLinkedList
+  - task1_3_CircularLinkedList
+  - task2_1_Node__init__repr__
+  - task2_2_Node_list_comprehension_loop_for
+  - task2_3_Node_is_valid_set_node
+  - task2_4_Node_linked_nodes_method
+  - task2_5_Node_algo_linked_nodes
+  - task2_6_Node_methods
+  - task3_1_LinkedList_init_linked_list
+  - task3_2_LinkedList_append_extend
+  - task3_3_LinkedList_step_by_step_on_node
+  - task3_4_LinkedList__getitem__setitem__delitem__
+  - task3_5_LinkedList_in
+  - task3_6_LinkedList_loop_for
+  - task3_7_LinkedList_sorted
+  - task3_8_LinkedList__bool__
+  - task3_9_LinkedList_insert_index_count_pop
+  - task3_10_LinkedList__add__sub__
+  - task4_1_DoublyLinkedList_reversed

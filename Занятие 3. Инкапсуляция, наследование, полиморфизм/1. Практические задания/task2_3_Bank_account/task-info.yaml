@@ -1,0 +1,46 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 1308
+        length: 28
+        placeholder_text: "...  # TODO реализуйте метод"
+        initial_state:
+          length: 28
+          offset: 1308
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if rate <= 0:
+                      raise ValueError('Процентная ставка должна быть положительной.')
+                  interest = self.get_balance() * rate
+                  self.deposit(interest)
+        selected: false
+        status: Unchecked
+      - offset: 1560
+        length: 28
+        placeholder_text: "...  # TODO Реализуйте метод"
+        initial_state:
+          length: 28
+          offset: 1560
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          fee = amount * self.__commission
+                  total_amount = amount + fee
+                  if not total_amount <= self.get_balance():
+                      print("Недостаточно средств после уплаты сбора.")
+                  self._set_balance(self.get_balance() - total_amount)
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

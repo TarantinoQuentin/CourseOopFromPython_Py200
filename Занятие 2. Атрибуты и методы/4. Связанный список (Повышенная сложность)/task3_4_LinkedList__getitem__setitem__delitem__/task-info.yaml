@@ -1,0 +1,123 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 2412
+        length: 34
+        placeholder_text: "...  # TODO верините атрибут длины"
+        initial_state:
+          length: 34
+          offset: 2412
+        initialized_from_dependency: false
+        encrypted_possible_answer: return self.len
+        selected: false
+        status: Unchecked
+      - offset: 2647
+        length: 87
+        placeholder_text: "...  # TODO получите узел при помощи метода step_by_step_on_nodes\
+      \ по требуемому индексу"
+        initial_state:
+          length: 87
+          offset: 2647
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.step_by_step_on_nodes(index)
+        selected: false
+        status: Unchecked
+      - offset: 2743
+        length: 33
+        placeholder_text: "...  # TODO верните значение узла"
+        initial_state:
+          length: 33
+          offset: 2743
+        initialized_from_dependency: false
+        encrypted_possible_answer: return node.value
+        selected: false
+        status: Unchecked
+      - offset: 3027
+        length: 87
+        placeholder_text: "...  # TODO получите узел при помощи метода step_by_step_on_nodes\
+      \ по требуемому индексу"
+        initial_state:
+          length: 87
+          offset: 3027
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.step_by_step_on_nodes(key)
+        selected: false
+        status: Unchecked
+      - offset: 3123
+        length: 66
+        placeholder_text: "...  # TODO в атрибут value объекта node установите новое з\
+      начение"
+        initial_state:
+          length: 66
+          offset: 3123
+        initialized_from_dependency: false
+        encrypted_possible_answer: node.value = value
+        selected: false
+        status: Unchecked
+      - offset: 3543
+        length: 59
+        placeholder_text: "...  # TODO установите значение ссылки на следующий элемент"
+        initial_state:
+          length: 59
+          offset: 3543
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.head.next
+        selected: false
+        status: Unchecked
+      - offset: 3682
+        length: 65
+        placeholder_text: "...  # TODO найдите предыдущий узел (предыдущий относительн\
+      о key)"
+        initial_state:
+          length: 65
+          offset: 3682
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.step_by_step_on_nodes(key - 1)
+        selected: false
+        status: Unchecked
+      - offset: 3851
+        length: 60
+        placeholder_text: "...  # TODO получите значение текущего узла через предыдущи\
+      й"
+        initial_state:
+          length: 60
+          offset: 3851
+        initialized_from_dependency: false
+        encrypted_possible_answer: previous_node.next
+        selected: false
+        status: Unchecked
+      - offset: 4056
+        length: 99
+        placeholder_text: "...  # TODO свяжите предыдущий узел (previous_node) и следу\
+      ющий (next_node)  используя linked_nodes"
+        initial_state:
+          length: 99
+          offset: 4056
+        initialized_from_dependency: false
+        encrypted_possible_answer: "self.linked_nodes(previous_node, next_node)"
+        selected: false
+        status: Unchecked
+      - offset: 4165
+        length: 50
+        placeholder_text: "...  # TODO обновите значение длины после удаления"
+        initial_state:
+          length: 50
+          offset: 4165
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.len -= 1
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,50 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 82
+        length: 101
+        placeholder_text: "# TODO Создайте классовый атрибут total_dogs и инициализиру\
+      йте его со значением ноль (total_dogs = 0)"
+        initial_state:
+          length: 101
+          offset: 82
+        initialized_from_dependency: false
+        encrypted_possible_answer: total_dogs = 0
+        selected: false
+        status: Unchecked
+      - offset: 327
+        length: 107
+        placeholder_text: "# TODO Увеличьте значение классового атрибута, обратиться м\
+      ожно через название класса (Dog.total_dogs += 1)"
+        initial_state:
+          length: 107
+          offset: 327
+        initialized_from_dependency: false
+        encrypted_possible_answer: Dog.total_dogs += 1
+        selected: false
+        status: Unchecked
+      - offset: 563
+        length: 142
+        placeholder_text: "...  # TODO Верните значение классового атрибута, вспомните\
+      , что когда работаем с классовым атрибутом то пишем cls, а не self (cls.total_dogs)"
+        initial_state:
+          length: 142
+          offset: 563
+        initialized_from_dependency: false
+        encrypted_possible_answer: cls.total_dogs
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

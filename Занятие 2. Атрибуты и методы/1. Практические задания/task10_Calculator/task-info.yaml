@@ -1,0 +1,45 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 22
+        length: 61
+        placeholder_text: "# TODO Написать статический метод add для сложения двух чис\
+      ел"
+        initial_state:
+          length: 61
+          offset: 22
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @staticmethod
+              def add(a, b):
+                  return a + b
+        selected: false
+        status: Unchecked
+      - offset: 89
+        length: 63
+        placeholder_text: "# TODO  Написать статический метод mul для умножения двух ч\
+      исел"
+        initial_state:
+          length: 63
+          offset: 89
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @staticmethod
+              def mul(a, b):
+                  return a * b
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

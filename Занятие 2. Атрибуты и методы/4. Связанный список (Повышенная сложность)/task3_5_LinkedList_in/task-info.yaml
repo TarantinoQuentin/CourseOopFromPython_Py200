@@ -1,0 +1,37 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 3818
+        length: 54
+        placeholder_text: "# TODO  добавьте метод __contains__ из описания задачи"
+        initial_state:
+          length: 54
+          offset: 3818
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __contains__(self, value: Any) -> bool:
+                  """Метод для поддержки оператора in."""
+                  print(f"Вызов метода __contains__, запросили сравнение с value={value}")
+          
+                  current = self.head
+                  while current is not None:
+                      if current.value == value:
+                          return True
+                      current = current.next
+                  return False
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1

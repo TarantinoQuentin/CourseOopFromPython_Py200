@@ -1,0 +1,55 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 1377
+        length: 28
+        placeholder_text: "# TODO вернуть значение узла"
+        initial_state:
+          length: 28
+          offset: 1377
+        initialized_from_dependency: false
+        encrypted_possible_answer: return self.value
+        selected: false
+        status: Unchecked
+      - offset: 1502
+        length: 36
+        placeholder_text: "# TODO вернуть значение атрбута next"
+        initial_state:
+          length: 36
+          offset: 1502
+        initialized_from_dependency: false
+        encrypted_possible_answer: return self.next
+        selected: false
+        status: Unchecked
+      - offset: 1654
+        length: 57
+        placeholder_text: "# TODO с помощью метода распечатать значение первого узла"
+        initial_state:
+          length: 57
+          offset: 1654
+        initialized_from_dependency: false
+        encrypted_possible_answer: print(first_node.get_value())
+        selected: false
+        status: Unchecked
+      - offset: 1716
+        length: 63
+        placeholder_text: "# TODO с помощью метода распечатать следующий узел второго\
+      \ узла"
+        initial_state:
+          length: 63
+          offset: 1716
+        initialized_from_dependency: false
+        encrypted_possible_answer: print(second_node.get_next())
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

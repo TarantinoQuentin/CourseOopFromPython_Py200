@@ -1,0 +1,37 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 628
+        length: 58
+        placeholder_text: "...  # TODO метод должен возвращать значение текущего узла"
+        initial_state:
+          length: 58
+          offset: 628
+        initialized_from_dependency: false
+        encrypted_possible_answer: return str(self.value)
+        selected: false
+        status: Unchecked
+      - offset: 1810
+        length: 68
+        placeholder_text: "# TODO реализуйте алгоритм, который свяжет между собой узлы\
+      \ в списке"
+        initial_state:
+          length: 68
+          offset: 1810
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          for idx, node in enumerate(list_nodes[:-1]):
+                  linked_nodes(node, list_nodes[idx+1])
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

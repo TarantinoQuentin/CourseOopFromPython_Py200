@@ -1,0 +1,85 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 1174
+        length: 60
+        placeholder_text: "...  # TODO реализация для добавления продукта в репозитори\
+      й"
+        initial_state:
+          length: 60
+          offset: 1174
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if product.product_id in self.products:
+                      raise ValueError("Продукт с таким ID уже существует.")
+                  self.products[product.product_id] = product
+        selected: false
+        status: Unchecked
+      - offset: 1283
+        length: 60
+        placeholder_text: "...  # TODO реализация для обновления продукта в репозитори\
+      и"
+        initial_state:
+          length: 60
+          offset: 1283
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if product.product_id not in self.products:
+                      raise ValueError("Продукт с таким ID не найден.")
+                  self.products[product.product_id] = product
+        selected: false
+        status: Unchecked
+      - offset: 1392
+        length: 61
+        placeholder_text: "...  # TODO реализация для извлечения продукта из репозитор\
+      ия"
+        initial_state:
+          length: 61
+          offset: 1392
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if product_id not in self.products:
+                      raise ValueError(f"Продукт с ID {product_id} не найден.")
+                  return self.products[product_id]
+        selected: false
+        status: Unchecked
+      - offset: 1623
+        length: 58
+        placeholder_text: "...  # TODO реализация для размещения заказа в репозитории"
+        initial_state:
+          length: 58
+          offset: 1623
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if order.order_id in self.orders:
+                      raise ValueError("Заказ с таким ID уже существует.")
+                  self.orders[order.order_id] = order
+        selected: false
+        status: Unchecked
+      - offset: 1726
+        length: 59
+        placeholder_text: "...  # TODO реализация для извлечения заказа из репозитория"
+        initial_state:
+          length: 59
+          offset: 1726
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if order_id not in self.orders:
+                      raise ValueError(f"Заказ с ID {order_id} не найден.")
+                  return self.orders[order_id]
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

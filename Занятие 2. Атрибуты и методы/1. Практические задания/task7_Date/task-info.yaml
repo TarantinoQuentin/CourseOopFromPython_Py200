@@ -1,0 +1,59 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 77
+        length: 117
+        placeholder_text: "# TODO Инициализируйте переменные с проверкой соответствия\
+      \ типа, если не соответствует, то вызывайте ошибку TypeError"
+        initial_state:
+          length: 117
+          offset: 77
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not isinstance(day, int):
+                      raise TypeError('Неверный тип day')
+                  self.day = day
+                  if not isinstance(month, int):
+                      raise TypeError('Неверный тип month')
+                  self.month = month
+                  if not isinstance(year, int):
+                      raise TypeError('Неверный тип year')
+                  self.year = year
+        selected: false
+        status: Unchecked
+      - offset: 227
+        length: 54
+        placeholder_text: "... # TODO Реализуйте возвращение в формате DD/MM/YYYY"
+        initial_state:
+          length: 54
+          offset: 227
+        initialized_from_dependency: false
+        encrypted_possible_answer: "return f\"{self.day:0>2}/{self.month:0>2}/{self.year:4}\""
+        selected: false
+        status: Unchecked
+      - offset: 315
+        length: 78
+        placeholder_text: "... # TODO Реализуйте возвращение в формате Date(day=..., month=...,\
+      \ year=...)"
+        initial_state:
+          length: 78
+          offset: 315
+        initialized_from_dependency: false
+        encrypted_possible_answer: "return f\"{self.__class__.__name__}(day={self.day!r},\
+      \ month={self.month!r}, year={self.year!r})\""
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,60 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 621
+        length: 134
+        placeholder_text: "...  # TODO  self.permissions это словарь с разрешениями на\
+      \ действия (action) проверьте есть ли соответствующее разрешение на действие"
+        initial_state:
+          length: 134
+          offset: 621
+        initialized_from_dependency: false
+        encrypted_possible_answer: "return self.permissions.get(action, False)"
+        selected: false
+        status: Unchecked
+      - offset: 1287
+        length: 250
+        placeholder_text: "...  # TODO Проверьте есть ли у пользователя право на просм\
+      отр пароля, это действие называется 'view_password'. У атрибута role проверь\
+      те метод has_permission. Если такое разрешение есть, то верните пароль, если\
+      \ нет то вызовите ошибку PermissionError"
+        initial_state:
+          length: 250
+          offset: 1287
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if self.role.has_permission("view_password"):
+                      return self.__password
+                  else:
+                      raise PermissionError("Доступ запрещен к паролю")
+        selected: false
+        status: Unchecked
+      - offset: 1799
+        length: 112
+        placeholder_text: "...  # TODO Произведите аналогичные манипуляции как и в мет\
+      оде get_password только для разрешения 'view_address'"
+        initial_state:
+          length: 112
+          offset: 1799
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if self.role.has_permission("view_address"):
+                      return self.__address
+                  else:
+                      raise PermissionError("Доступ запрещен к адресу")
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

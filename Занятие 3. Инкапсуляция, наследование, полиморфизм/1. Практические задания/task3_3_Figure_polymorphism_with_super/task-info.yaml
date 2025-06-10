@@ -1,0 +1,25 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 388
+        length: 62
+        placeholder_text: "...  # TODO c помощью super вызвать метод area базового кла\
+      сса"
+        initial_state:
+          length: 62
+          offset: 388
+        initialized_from_dependency: false
+        encrypted_possible_answer: super().area()
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

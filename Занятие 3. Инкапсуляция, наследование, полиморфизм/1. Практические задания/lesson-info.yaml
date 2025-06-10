@@ -1,0 +1,15 @@
+content:
+  - task1_1_theory
+  - task1_2_theory
+  - task1_3_theory
+  - task1_4_Counter
+  - task1_5_Counter_property
+  - task1_6_User
+  - task2_1_theory
+  - task2_2_theory
+  - task2_3_Bank_account
+  - task3_1_theory
+  - task3_2_Figure_super
+  - task3_3_Figure_polymorphism_with_super
+  - task3_4_Figure_polymorphism_inheritance
+  - task3_5_Bibliomanager

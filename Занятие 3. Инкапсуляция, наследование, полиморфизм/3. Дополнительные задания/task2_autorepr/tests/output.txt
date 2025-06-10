@@ -1,0 +1,3 @@
+Book(name='Война и мир', page=960, year=1867)
+EBook(name='Война и мир', page=960, year=1867, size=100)
+AudioBook(name='Война и мир', page=960, year=1867, duration=1000)

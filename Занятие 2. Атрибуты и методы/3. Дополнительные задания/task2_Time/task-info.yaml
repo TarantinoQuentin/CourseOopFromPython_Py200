@@ -1,0 +1,37 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 330
+        length: 40
+        placeholder_text: "...  # TODO реализуйте проверку \"меньше\""
+        initial_state:
+          length: 40
+          offset: 330
+        initialized_from_dependency: false
+        encrypted_possible_answer: "return (self.hour, self.minute) < (other.hour, other.minute)"
+        selected: false
+        status: Unchecked
+      - offset: 409
+        length: 50
+        placeholder_text: "...  # TODO реализуйте проверку \"меньше или равно\""
+        initial_state:
+          length: 50
+          offset: 409
+        initialized_from_dependency: false
+        encrypted_possible_answer: "return (self.hour, self.minute) <= (other.hour, other.minute)"
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

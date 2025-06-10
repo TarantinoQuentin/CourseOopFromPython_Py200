@@ -1,0 +1,55 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 121
+        length: 54
+        placeholder_text: "# TODO создайте приватные атрибуты для пароля и адреса"
+        initial_state:
+          length: 54
+          offset: 121
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          self.__password = password
+                  self.__address = address
+        selected: false
+        status: Unchecked
+      - offset: 322
+        length: 41
+        placeholder_text: "# TODO если роль 'admin', то вернуть True"
+        initial_state:
+          length: 41
+          offset: 322
+        initialized_from_dependency: false
+        encrypted_possible_answer: return role == "admin"
+        selected: false
+        status: Unchecked
+      - offset: 419
+        length: 169
+        placeholder_text: "...  # TODO провести проверку доступа по роли, если прошла\
+      , то вернуть пароль, если не прошел проверку, то вызвать исключение PermissionError\
+      \ с текстом 'Доступ запрещен'"
+        initial_state:
+          length: 169
+          offset: 419
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if self.check_permission(role):
+                      return self.__password
+                  else:
+                      raise PermissionError("Доступ запрещен")
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: tests/input.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

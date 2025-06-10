@@ -1,0 +1,47 @@
+type: theory
+files:
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: example.py
+    visible: true
+    learner_created: false
+  - name: test_main1.py
+    visible: true
+    learner_created: false
+  - name: test_main2.py
+    visible: true
+    learner_created: false
+  - name: test.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: tmp/__init__.py
+    visible: false
+    learner_created: false
+  - name: tmp/test_main4.py
+    visible: true
+    learner_created: false
+  - name: tmp/tmp1/__init__.py
+    visible: false
+    learner_created: false
+  - name: tmp/tmp1/test_main5.py
+    visible: true
+    learner_created: false
+  - name: test1.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: img.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: tests1/__init__.py
+    visible: false
+    learner_created: false
+  - name: tests1/test_main3.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

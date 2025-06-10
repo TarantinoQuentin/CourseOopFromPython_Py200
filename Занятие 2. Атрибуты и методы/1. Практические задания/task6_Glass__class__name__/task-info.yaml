@@ -1,0 +1,26 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 322
+        length: 105
+        placeholder_text: "f\"Glass({self.capacity_volume}, {self.occupied_volume})\"\
+      \ # TODO замените Glass на self.__class__.__name__"
+        initial_state:
+          length: 105
+          offset: 322
+        initialized_from_dependency: false
+        encrypted_possible_answer: "f\"{self.__class__.__name__}({self.capacity_volume},\
+      \ {self.occupied_volume})\""
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

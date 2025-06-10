@@ -1,0 +1,584 @@
+type: theory
+files:
+  - name: main.py
+    visible: true
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: python.html
+    visible: true
+    learner_created: false
+  - name: python_files/union.svg
+    visible: true
+    learner_created: false
+  - name: python_files/union_3.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/union_8.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/union_9.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/qr-code_1.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/union_11.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/union_13.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/union_14.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/ic_m_plane.svg
+    visible: true
+    learner_created: false
+  - name: python_files/1024814738.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/1033218246.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/1037901047.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6008942043.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6012546520.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6014832347.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6029229411.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6032216466.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6053509617.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6062448718.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6098567140.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6104971998.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6114691257.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6136984191.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6170125372.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6181065578.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6200921314.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6243833246.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6246001473.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6246001510.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6262023532.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6273189421.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6278373614.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6292679275.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6309288608.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6312532069.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6321812278.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6322311972.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6322312159.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6332881137.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6364874336.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6379266121.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6379813468.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6379918394.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6384863278.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6388011022.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6414345788.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6414350341.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6416263338.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6421259499.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6496989624.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6506619433.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6506678803.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6524664189.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6524664196.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6538577200.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6558043474.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6558167024.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6561730295.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6571157429.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6577450470.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6590667217.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6595254334.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6599154601.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6619608111.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6624825840.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6626379278.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6628282099.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6632794670.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6640486505.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6641703747.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6656344158.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6670988516.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6690971085.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6692925079.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6701471716.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6702177202.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6736512123.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6755374366.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6780751926.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6815695671.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6832882378.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6875868115.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6915980313.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6916323583.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6917144803.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6917230647.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6941254138.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6964828199.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6965260394.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6971201967.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6971295547.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6975034699.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6985615809.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6993292042.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6998383717.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6998385052.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/6998797042.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7010041975.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7026575149.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7034612745.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7042382445.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7042722812.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7042793937.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7073993765.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7088518546.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7098660307.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/7101505248.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/group_357647.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/group_357648.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/group_357649.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/group_357672.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/ic_m_gift_1.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/rustore_desk.svg
+    visible: true
+    learner_created: false
+  - name: python_files/ic_m_dresses.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/sdk.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/1.3.1.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/ic_m_electronics.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/ic_m_status_points3x.svg
+    visible: true
+    learner_created: false
+  - name: python_files/logo-logo-ozon-blue-png.webp
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: python_files/9098d7f3_host.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_main.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_atoms-notification.css
+    visible: true
+    learner_created: false
+  - name: python_files/cpm-ozon@4.24.0.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_i18n-ru.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_runtime.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_notification-service.css
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_vendor-vue.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/@bx-fe_ui-kit-image_2.1.5_index.css
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_vendor-core.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_atoms-circular-countdown.css
+    visible: true
+    learner_created: false
+  - name: python_files/1.1.0_polyfills.modern.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_cms_cms-cookie-bubble.css
+    visible: true
+    learner_created: false
+  - name: python_files/@bx-fe_ui-kit-notification_2.0.16_index.css
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_bfs_entry.b2b.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_cms_entry.cms.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_swa_entry.swa.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_udm_entry.csma.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_cart_entry.cart.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_csma_entry.csma.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/@bx-fe_ui-kit-ds-notification-bar_2.2.4_index.css
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_udm_entry.ozonid.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_csma_entry.common.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_navi_entry.catalog.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_common_entry.common.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_navi_entry.products.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_search_entry.search.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_search_entry.catalog.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_my-profile_entry.csma.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_search_entry.favorites.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_favorites_entry.favorites.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_checkout_entry.address-book-map.js.Без названия
+    visible: true
+    learner_created: false
+  - name: python_files/9098d7f3_detached_address-book-map_entry.address-book-map.js.Без
+      названия
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1
+post_submission_on_open: true

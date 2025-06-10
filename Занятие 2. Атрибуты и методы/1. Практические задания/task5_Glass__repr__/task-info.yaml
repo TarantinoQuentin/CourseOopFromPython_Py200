@@ -1,0 +1,26 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 408
+        length: 32
+        placeholder_text: "# TODO реализуйте метод __repr__"
+        initial_state:
+          length: 32
+          offset: 408
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __repr__(self) -> str:
+                  return f"Glass({self.capacity_volume}, {self.occupied_volume})"
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,31 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 4775
+        length: 49
+        placeholder_text: "# TODO добавьте метод __bool__ из описания задачи"
+        initial_state:
+          length: 49
+          offset: 4775
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __bool__(self) -> bool:
+                  """Возвращает True, если список непустой, и False, если пустой."""
+                  print("Вызов метода __bool__")
+                  return self.head is not None
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: node.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1
