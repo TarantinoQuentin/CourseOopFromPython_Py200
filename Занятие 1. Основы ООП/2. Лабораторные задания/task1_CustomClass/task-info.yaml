@@ -6,6 +6,12 @@ files:
   - name: __init__.py
     visible: false
     learner_created: false
-status: Unchecked
+  - name: second_class.py
+    visible: true
+    learner_created: true
+  - name: third_class.py
+    visible: true
+    learner_created: true
+status: Solved
 record: -1
 post_submission_on_open: true

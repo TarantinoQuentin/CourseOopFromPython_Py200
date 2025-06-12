@@ -13,7 +13,9 @@ content:
   - Дополнительно. Тестирование
   - Дополнительно. Паттерны и принципы SOLID
   - Задания и проекты
+additional_files:
+  - name: .idea/inspectionProfiles/profiles_settings.xml
 mode: Study
 vendor:
   name: "Егор Обидин, Алексей Первушин"
-yaml_version: 1
+yaml_version: 2
