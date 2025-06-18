@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 408
-        length: 32
+      - offset: 404
+        length: 95
         placeholder_text: "# TODO реализуйте метод __repr__"
         initial_state:
           length: 32
@@ -13,8 +13,8 @@ files:
         encrypted_possible_answer: |-
           def __repr__(self) -> str:
                   return f"Glass({self.capacity_volume}, {self.occupied_volume})"
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -22,5 +22,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 18 Jun 2025 15:44:11 UTC"
 record: -1

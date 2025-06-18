@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 77
-        length: 117
+        length: 123
         placeholder_text: "# TODO Инициализируйте переменные с проверкой соответствия\
       \ типа, если не соответствует, то вызывайте ошибку TypeError"
         initial_state:
@@ -21,20 +21,20 @@ files:
                   if not isinstance(year, int):
                       raise TypeError('Неверный тип year')
                   self.year = year
-        selected: false
-        status: Unchecked
-      - offset: 227
-        length: 54
+        selected: true
+        status: Solved
+      - offset: 513
+        length: 53
         placeholder_text: "... # TODO Реализуйте возвращение в формате DD/MM/YYYY"
         initial_state:
           length: 54
           offset: 227
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"{self.day:0>2}/{self.month:0>2}/{self.year:4}\""
-        selected: false
-        status: Unchecked
-      - offset: 315
-        length: 78
+        selected: true
+        status: Solved
+      - offset: 599
+        length: 76
         placeholder_text: "... # TODO Реализуйте возвращение в формате Date(day=..., month=...,\
       \ year=...)"
         initial_state:
@@ -43,8 +43,8 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"{self.__class__.__name__}(day={self.day!r},\
       \ month={self.month!r}, year={self.year!r})\""
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -55,5 +55,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 18 Jun 2025 15:58:51 UTC"
 record: -1

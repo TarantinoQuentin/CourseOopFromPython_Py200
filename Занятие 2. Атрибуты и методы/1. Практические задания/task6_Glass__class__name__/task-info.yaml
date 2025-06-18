@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 322
-        length: 105
+        length: 125
         placeholder_text: "f\"Glass({self.capacity_volume}, {self.occupied_volume})\"\
       \ # TODO замените Glass на self.__class__.__name__"
         initial_state:
@@ -14,7 +14,7 @@ files:
         encrypted_possible_answer: "f\"{self.__class__.__name__}({self.capacity_volume},\
       \ {self.occupied_volume})\""
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -22,5 +22,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 18 Jun 2025 15:45:43 UTC"
 record: -1

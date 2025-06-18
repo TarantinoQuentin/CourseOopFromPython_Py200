@@ -7,7 +7,7 @@ class Glass:
         self.occupied_volume = occupied_volume  # объем жидкости в стакане
 
     def __str__(self) -> str:
-        return # TODO метод должен возвращать строку, которая содержит человеко-читаемую информацию
+        return (f'Стакан объёмом {self.capacity_volume}. Объём жидкости = {self.occupied_volume}')
 
 
 if __name__ == "__main__":

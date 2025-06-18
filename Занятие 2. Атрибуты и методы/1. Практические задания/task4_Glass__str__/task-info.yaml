@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 321
-        length: 84
+        length: 83
         placeholder_text: "# TODO метод должен возвращать строку, которая содержит чел\
       овеко-читаемую информацию"
         initial_state:
@@ -13,8 +13,8 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: "f\"Стакан объёмом {self.capacity_volume}. Объём жи\
       дкости = {self.occupied_volume}\""
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -22,5 +22,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 18 Jun 2025 15:33:01 UTC"
 record: -1

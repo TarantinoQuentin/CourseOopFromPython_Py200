@@ -1,13 +1,20 @@
 class Date:
     def __init__(self, day: int, month: int, year: int):
-        # TODO Инициализируйте переменные с проверкой соответствия типа, если не соответствует, то вызывайте ошибку TypeError
+        if not isinstance(day, int):
+            raise TypeError('День должен быть целочисленным значением')
+        self.day = day
+        if not isinstance(month, int):
+            raise TypeError('Месяц должен быть целочисленным значением')
+        self.month = month
+        if not isinstance(year, int):
+            raise TypeError('Год должен быть целочисленным значением')
+        self.year = year
 
-    def __str__(self):
-        ... # TODO Реализуйте возвращение в формате DD/MM/YYYY
+    def __str__(self) -> str:
+        return f'{self.day:0>2}/{self.month:0>2}/{self.year}'
 
-    def __repr__(self):
-        ... # TODO Реализуйте возвращение в формате Date(day=..., month=..., year=...)
-
+    def __repr__(self) -> str:
+        return f'Date(day={self.day}, month={self.month}, year={self.year})'
 
 if __name__ == "__main__":
     date1 = Date(1, 1, 2021)

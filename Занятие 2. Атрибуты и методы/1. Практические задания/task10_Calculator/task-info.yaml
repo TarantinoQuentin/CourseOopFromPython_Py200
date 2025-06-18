@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 22
-        length: 61
+      - offset: 36
+        length: 56
         placeholder_text: "# TODO Написать статический метод add для сложения двух чис\
       ел"
         initial_state:
@@ -15,10 +15,10 @@ files:
           @staticmethod
               def add(a, b):
                   return a + b
-        selected: false
-        status: Unchecked
-      - offset: 89
-        length: 63
+        selected: true
+        status: Solved
+      - offset: 116
+        length: 52
         placeholder_text: "# TODO  Написать статический метод mul для умножения двух ч\
       исел"
         initial_state:
@@ -29,8 +29,8 @@ files:
           @staticmethod
               def mul(a, b):
                   return a * b
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -41,5 +41,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 18 Jun 2025 16:25:30 UTC"
 record: -1

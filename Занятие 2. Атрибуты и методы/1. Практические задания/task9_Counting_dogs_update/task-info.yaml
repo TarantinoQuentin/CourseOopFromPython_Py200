@@ -4,15 +4,15 @@ files:
     visible: true
     placeholders:
       - offset: 230
-        length: 45
+        length: 23
         placeholder_text: "# TODO  Обновите классовый атрибут total_dogs"
         initial_state:
           length: 45
           offset: 230
         initialized_from_dependency: false
         encrypted_possible_answer: cls.total_dogs += count
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -23,5 +23,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 18 Jun 2025 16:19:43 UTC"
 record: -1
