@@ -9,8 +9,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 220
-        length: 60
+      - offset: 250
+        length: 56
         placeholder_text: "# TODO Импортируйте и скопируйте ранее написанный класс Book"
         initial_state:
           length: 60
@@ -19,38 +19,41 @@ files:
         encrypted_possible_answer: |-
           class Book:
               ...
-        selected: false
-        status: Unchecked
-      - offset: 586
-        length: 26
+        selected: true
+        status: Solved
+      - offset: 939
+        length: 47
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 586
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 840
-        length: 26
+        selected: true
+        status: Solved
+      - offset: 1214
+        length: 238
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 840
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 1280
-        length: 26
+        selected: true
+        status: Solved
+      - offset: 1866
+        length: 103
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 1280
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 19 Jun 2025 18:07:01 UTC"
 record: -1
