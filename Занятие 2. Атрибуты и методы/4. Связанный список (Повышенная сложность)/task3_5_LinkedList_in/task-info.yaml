@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 3818
-        length: 54
+        length: 359
         placeholder_text: "# TODO  добавьте метод __contains__ из описания задачи"
         initial_state:
           length: 54
@@ -21,8 +21,8 @@ files:
                           return True
                       current = current.next
                   return False
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -33,5 +33,8 @@ files:
   - name: node.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jun 2025 16:36:04 UTC"
 record: -1

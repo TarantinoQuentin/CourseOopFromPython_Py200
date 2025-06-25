@@ -10,7 +10,7 @@ files:
     visible: true
     placeholders:
       - offset: 544
-        length: 85
+        length: 28
         placeholder_text: "...  # TODO с помощью list comprehension сделать список узл\
       ов со значениями от 0 до 9"
         initial_state:
@@ -18,10 +18,10 @@ files:
           offset: 544
         initialized_from_dependency: false
         encrypted_possible_answer: "[Node(i) for i in range(10)]"
-        selected: false
-        status: Unchecked
-      - offset: 657
-        length: 33
+        selected: true
+        status: Solved
+      - offset: 600
+        length: 49
         placeholder_text: "# TODO распечатать значения узлов"
         initial_state:
           length: 33
@@ -30,8 +30,11 @@ files:
         encrypted_possible_answer: |-
           for node in list_nodes:
                   print(node.value)
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 23 Jun 2025 16:23:49 UTC"
 record: -1

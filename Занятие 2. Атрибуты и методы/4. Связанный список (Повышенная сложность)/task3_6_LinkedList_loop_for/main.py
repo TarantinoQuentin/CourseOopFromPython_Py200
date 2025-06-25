@@ -121,9 +121,20 @@ class LinkedList:
             current = current.next
         return False
 
-    # TODO добавьте метод __iter__ из описания задачи
+    def __iter__(self):
+        """Инициализирует итератор и возвращает его."""
+        print("Вызов метода __iter__")
+        self.current_node = self.head
+        return self
 
-    # TODO добавьте метод __next__ из описания задачи
+    def __next__(self):
+        """Возвращает следующий элемент при итерации."""
+        print("Вызов метода __next__")
+        if self.current_node is None:  # Если больше нет элементов
+            raise StopIteration
+        current_value = self.current_node.value  # Получаем значение текущего узла
+        self.current_node = self.current_node.next  # Переходим на следующий узел
+        return current_value
 
 
 if __name__ == '__main__':
@@ -131,4 +142,5 @@ if __name__ == '__main__':
     linked_list = LinkedList(list_)
     print(linked_list)
 
-    # TODO с помощью цикла for распечатать в столбик все значения связного списка
+    for item in linked_list:
+        print(item)

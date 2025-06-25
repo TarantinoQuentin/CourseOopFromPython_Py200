@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 263
-        length: 108
+        length: 1039
         placeholder_text: "# TODO Создайте классовые атрибуты total_products (инициали\
       зируйте нулем) и total_revenue (инициализируйте нулем)"
         initial_state:
@@ -16,28 +16,28 @@ files:
               total_revenue = 0.0
         selected: true
         status: Solved
-      - offset: 843
-        length: 92
+      - offset: 1729
+        length: 58
         placeholder_text: "# TODO Обновите значение классового атрибута total_revenue"
         initial_state:
           length: 58
           offset: 803
         initialized_from_dependency: false
         encrypted_possible_answer: cls.total_revenue += value
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1008
-        length: 54
+      - offset: 1860
+        length: 59
         placeholder_text: "# TODO Обновите значение классового атрибута total_products"
         initial_state:
           length: 59
           offset: 934
         initialized_from_dependency: false
         encrypted_possible_answer: cls.total_products += value
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1425
-        length: 234
+      - offset: 2243
+        length: 101
         placeholder_text: "# TODO Проверьте, что если запрашиваемого числа товара нет\
       \ на складе, то вызывается ошибка ValueError"
         initial_state:
@@ -47,10 +47,10 @@ files:
         encrypted_possible_answer: |-
           if amount > self.quantity:
                       raise ValueError(f"Недостаточно товара {self.name} на складе!")
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1668
-        length: 125
+      - offset: 2353
+        length: 97
         placeholder_text: "# TODO Уменьшите количество товара на складе (self.quantity)\
       \ на соответствующее значение (amount)"
         initial_state:
@@ -58,10 +58,10 @@ files:
           offset: 1427
         initialized_from_dependency: false
         encrypted_possible_answer: self.quantity -= amount
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1812
-        length: 100
+      - offset: 2469
+        length: 84
         placeholder_text: "# TODO посчитайте выручку как количество проданного товара\
       \ умноженное на цену товара"
         initial_state:
@@ -69,10 +69,10 @@ files:
           offset: 1543
         initialized_from_dependency: false
         encrypted_possible_answer: amount * self.price
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1921
-        length: 121
+      - offset: 2562
+        length: 84
         placeholder_text: "# TODO Добавить выручку (revenue) к классовой переменной от\
       вечающей за общую выручку"
         initial_state:
@@ -80,10 +80,10 @@ files:
           offset: 1636
         initialized_from_dependency: false
         encrypted_possible_answer: self.add_value_to_total_revenue(revenue)
-        selected: true
+        selected: false
         status: Solved
-      - offset: 2051
-        length: 130
+      - offset: 2655
+        length: 101
         placeholder_text: "# TODO Уменьшите значение классовой переменной total_products,\
       \ так как общее чмсор товаров изменилось"
         initial_state:
@@ -91,10 +91,10 @@ files:
           offset: 1729
         initialized_from_dependency: false
         encrypted_possible_answer: self.add_value_total_products(-amount)
-        selected: true
+        selected: false
         status: Solved
-      - offset: 2472
-        length: 125
+      - offset: 3047
+        length: 98
         placeholder_text: "# TODO Увеличьте количество товара на складе (self.quantity)\
       \ на соответствующее значение (amount)'"
         initial_state:
@@ -102,10 +102,10 @@ files:
           offset: 2121
         initialized_from_dependency: false
         encrypted_possible_answer: self.quantity += amount
-        selected: true
+        selected: false
         status: Solved
-      - offset: 2606
-        length: 112
+      - offset: 3154
+        length: 71
         placeholder_text: "# TODO Увеличьте общее число товаров total_products (классо\
       вый атрибут)"
         initial_state:
@@ -113,20 +113,20 @@ files:
           offset: 2228
         initialized_from_dependency: false
         encrypted_possible_answer: self.add_value_total_products(amount)
-        selected: true
+        selected: false
         status: Solved
-      - offset: 3380
-        length: 81
+      - offset: 3761
+        length: 56
         placeholder_text: "# TODO Верните общее количество всех товаров в магазине."
         initial_state:
           length: 56
           offset: 2835
         initialized_from_dependency: false
         encrypted_possible_answer: return sum(product.quantity for product in self.products)
-        selected: true
+        selected: false
         status: Solved
-      - offset: 3733
-        length: 76
+      - offset: 3955
+        length: 55
         placeholder_text: "# TODO Верните общую стоимость всех товаров в магазине."
         initial_state:
           length: 55
@@ -134,10 +134,10 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: return sum(product.price * product.quantity for product
           in self.products)
-        selected: true
+        selected: false
         status: Solved
-      - offset: 3899
-        length: 322
+      - offset: 4100
+        length: 121
         placeholder_text: "# TODO Реализуйте сравнивание цен. Верните название товара\
       \ с большей ценой, если одинаковые, то верните 'Цены одинаковы'."
         initial_state:
@@ -151,7 +151,7 @@ files:
                       return product2.name
                   else:
                       return "Цены одинаковы"
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -166,5 +166,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Thu, 19 Jun 2025 17:40:39 UTC"
+  time: "Sun, 22 Jun 2025 13:19:03 UTC"
 record: -1

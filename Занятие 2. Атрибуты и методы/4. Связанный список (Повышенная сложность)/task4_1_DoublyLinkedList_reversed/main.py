@@ -147,7 +147,13 @@ class DoublyLinkedList:
         self.current_node = self.current_node.next  # Переходим на следующий узел
         return current_value
 
-    # TODO добавьте метод __reversed__ из описания задачи
+    def __reversed__(self):
+        """Возвращает элементы в обратном порядке."""
+        print("Вызов метода __reversed__")
+        current = self.tail  # Начинаем с хвоста списка
+        while current is not None:
+            yield current.value
+            current = current.prev  # Переходим к предыдущему узлу
 
 
 if __name__ == '__main__':

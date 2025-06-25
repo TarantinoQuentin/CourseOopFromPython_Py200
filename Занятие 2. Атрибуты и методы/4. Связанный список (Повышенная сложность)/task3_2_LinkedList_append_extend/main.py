@@ -17,15 +17,15 @@ class LinkedList:
         Добавляет новый узел в конец списка.
         :param value: Значение для нового узла.
         """
-        append_node = ...  # TODO создайте узел со значением value
+        append_node = Node(value)
         if self.head is None:
             # Если список пустой, новый узел становится головным
-            ...  # TODO установите головной узел как new_node
+            self.head = append_node
         else:
-            current = ...  # TODO установить значение головного узла
+            current = self.head
             # Проходим до последней известной ссылки
             while current.next is not None:
-                current = ...  # TODO как текущее значение используем соседа (current.next)
+                current = current.next
             self.linked_nodes(current, append_node)  # Добавляем новый узел
 
     def extend(self, iterable: Iterable[Any]) -> None:
@@ -33,7 +33,8 @@ class LinkedList:
         Добавляет несколько новых узлов в конец списка из итерируемого объекта.
         :param iterable: Итерируемый объект с элементами для добавления.
         """
-        ...  # TODO реализуйте добавления элементов в конец в цикле
+        for item in iterable:
+            self.append(item)
 
     @staticmethod
     def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:

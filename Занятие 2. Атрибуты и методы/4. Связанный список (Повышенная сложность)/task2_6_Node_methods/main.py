@@ -40,16 +40,16 @@ class Node:
 
     def get_value(self) -> Any:
         """Метод, который возвращает значение атрибута value"""
-        # TODO вернуть значение узла
+        return self.value
 
     def get_next(self):
         """Метод, который возвращает значение атрибута next"""
-        # TODO вернуть значение атрбута next
+        return self.next
 
 
 if __name__ == '__main__':
     first_node = Node(1)  # первый узел
     second_node = Node(2)  # второй узел
 
-    # TODO с помощью метода распечатать значение первого узла
-    # TODO с помощью метода распечатать следующий узел второго узла
+    print(first_node.get_value())
+    print(second_node.get_next())

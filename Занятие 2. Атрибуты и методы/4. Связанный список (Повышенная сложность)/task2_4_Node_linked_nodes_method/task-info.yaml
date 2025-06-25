@@ -3,8 +3,8 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 1401
-        length: 90
+      - offset: 1396
+        length: 35
         placeholder_text: "# TODO реализовать функцию (в левую ноду устанавливаем ссыл\
       ку через соответствующий метод)"
         initial_state:
@@ -12,18 +12,18 @@ files:
           offset: 1401
         initialized_from_dependency: false
         encrypted_possible_answer: left_node.set_next(right_node)
-        selected: false
-        status: Unchecked
-      - offset: 1577
-        length: 66
+        selected: true
+        status: Solved
+      - offset: 1517
+        length: 37
         placeholder_text: "# TODO связать между собой два узла с помощью функции linked_nodes"
         initial_state:
           length: 66
           offset: 1577
         initialized_from_dependency: false
         encrypted_possible_answer: "linked_nodes(first_node, second_node)"
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -31,5 +31,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 23 Jun 2025 17:39:35 UTC"
 record: -1

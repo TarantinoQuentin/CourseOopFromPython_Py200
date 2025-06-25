@@ -3,36 +3,36 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 313
-        length: 31
+      - offset: 335
+        length: 49
         placeholder_text: "... # TODO реализуйте вычитание"
         initial_state:
           length: 31
           offset: 313
         initialized_from_dependency: false
         encrypted_possible_answer: "return Vector(self.x - other.x, self.y - other.y)"
-        selected: false
-        status: Unchecked
-      - offset: 384
-        length: 31
+        selected: true
+        status: Solved
+      - offset: 446
+        length: 49
         placeholder_text: "... # TODO реализуйте умножение"
         initial_state:
           length: 31
           offset: 384
         initialized_from_dependency: false
         encrypted_possible_answer: "return Vector(self.x * other.x, self.y * other.y)"
-        selected: false
-        status: Unchecked
-      - offset: 459
-        length: 29
+        selected: true
+        status: Solved
+      - offset: 561
+        length: 49
         placeholder_text: "... # TODO реализуйте деление"
         initial_state:
           length: 29
           offset: 459
         initialized_from_dependency: false
         encrypted_possible_answer: "return Vector(self.x / other.x, self.y / other.y)"
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -43,5 +43,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 23 Jun 2025 16:09:05 UTC"
 record: -1

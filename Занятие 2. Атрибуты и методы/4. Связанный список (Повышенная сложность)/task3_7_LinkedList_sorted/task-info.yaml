@@ -12,5 +12,8 @@ files:
   - name: node.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jun 2025 18:00:20 UTC"
 record: -1

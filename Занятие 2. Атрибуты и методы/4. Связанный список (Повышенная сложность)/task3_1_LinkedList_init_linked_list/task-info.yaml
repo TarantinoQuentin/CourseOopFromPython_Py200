@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 459
-        length: 77
+      - offset: 476
+        length: 29
         placeholder_text: "...  # TODO обернуть все значения в класс Node и поместить\
       \ их в python список"
         initial_state:
@@ -12,10 +12,10 @@ files:
           offset: 459
         initialized_from_dependency: false
         encrypted_possible_answer: "[Node(value) for value in data]"
-        selected: false
-        status: Unchecked
-      - offset: 546
-        length: 46
+        selected: true
+        status: Solved
+      - offset: 515
+        length: 211
         placeholder_text: "# TODO составьте алгоритм, который свяжет узлы"
         initial_state:
           length: 46
@@ -28,8 +28,8 @@ files:
                   # или так
                   # for idx, node in enumerate(self.list_nodes[:-1]):
                   #     self.linked_nodes(node, self.list_nodes[idx + 1])
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -40,5 +40,8 @@ files:
   - name: node.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jun 2025 15:19:42 UTC"
 record: -1

@@ -77,19 +77,19 @@ class LinkedList:
 
     def __len__(self):
         print(f"Вызов метода __len__")
-        ...  # TODO верините атрибут длины
+        return self.len
 
     def __getitem__(self, index: int) -> Any:
         """ Метод возвращает значение узла по указанному индексу. """
         print(f"Вызов метода __getitem__, запросили index={index}")
-        node = ...  # TODO получите узел при помощи метода step_by_step_on_nodes по требуемому индексу
-        ...  # TODO верните значение узла
+        node = self.step_by_step_on_nodes(index)
+        return node
 
     def __setitem__(self, key: int, value: Any):
         """ Метод устанавливает значение узла по указанному индексу. """
         print(f"Вызов метода __setitem__, запросили изменение на позиции key={key} со значением value={value}")
-        node = ...  # TODO получите узел при помощи метода step_by_step_on_nodes по требуемому индексу
-        ...  # TODO в атрибут value объекта node установите новое значение
+        node = self.step_by_step_on_nodes(key)
+        node.value = value
 
     def __delitem__(self, key: int):
         """ Метод удаляет значение узла по указанному индексу. В качестве следующего элемента
@@ -98,17 +98,17 @@ class LinkedList:
         print(f"Вызов метода __delitem__, запросили удаление на позиции key={key}")
         if key == 0:
             # Удаление первого узла
-            self.head = ...  # TODO установите значение ссылки на следующий элемент
+            self.head = self.step_by_step_on_nodes(1)
         else:
             # Поиск предыдущего узла
-            previous_node = ...  # TODO найдите предыдущий узел (предыдущий относительно key)
+            previous_node = self.step_by_step_on_nodes(key - 1)
             # Удаление текущего узла и связывание предыдущего с последующим
-            current_node = ...  # TODO получите значение текущего узла через предыдущий
+            current_node = self.step_by_step_on_nodes(key)
             # Следующий узел определяется относительно текущего
             next_node = current_node.next if current_node else None
-            ...  # TODO свяжите предыдущий узел (previous_node) и следующий (next_node)  используя linked_nodes
+            self.linked_nodes(previous_node, next_node)
 
-        ...  # TODO обновите значение длины после удаления
+        self.len -= 1
 
 
 if __name__ == '__main__':

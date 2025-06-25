@@ -10,7 +10,7 @@ files:
     visible: true
     placeholders:
       - offset: 282
-        length: 66
+        length: 26
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
@@ -19,29 +19,29 @@ files:
         encrypted_possible_answer: pass
         selected: false
         status: Solved
-      - offset: 381
-        length: 29
+      - offset: 341
+        length: 26
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 341
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: true
+        selected: false
         status: Solved
-      - offset: 444
-        length: 74
+      - offset: 401
+        length: 26
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 401
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Thu, 19 Jun 2025 17:47:19 UTC"
+  time: "Sun, 22 Jun 2025 13:18:44 UTC"
 record: -1

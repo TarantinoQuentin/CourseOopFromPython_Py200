@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 3575
-        length: 23
+        length: 254
         placeholder_text: "# TODO реализуйте метод"
         initial_state:
           length: 23
@@ -20,10 +20,10 @@ files:
                       raise TypeError("Можно добавлять только Node или LinkedList.")
           
                   return self
-        selected: false
-        status: Unchecked
-      - offset: 3840
-        length: 23
+        selected: true
+        status: Solved
+      - offset: 4062
+        length: 387
         placeholder_text: "# TODO реализуйте метод"
         initial_state:
           length: 23
@@ -46,8 +46,8 @@ files:
                       current = current.next
           
                   raise ValueError(f"Node со значением {node.value} не найдена в списке.")
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -61,5 +61,8 @@ files:
   - name: node.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jun 2025 19:11:40 UTC"
 record: -1

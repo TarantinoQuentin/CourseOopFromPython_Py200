@@ -1,3 +1,4 @@
+import itertools
 from typing import Iterable, Optional
 from itertools import pairwise
 from node import Node
@@ -12,9 +13,13 @@ class LinkedList:
 
     def init_linked_list(self, data: Iterable):
         """ Метод, который создает вспомогательный список и связывает в нём узлы. """
-        self.list_nodes = ...  # TODO обернуть все значения в класс Node и поместить их в python список
+        self.list_nodes = [Node(item) for item in data]
 
-        # TODO составьте алгоритм, который свяжет узлы
+        for index, node in enumerate(self.list_nodes[:-1]):
+            self.linked_nodes(node, self.list_nodes[index + 1])
+
+        # for one, two in pairwise(self.list_nodes):
+        #     self.linked_nodes(one, two)
 
     @staticmethod
     def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:

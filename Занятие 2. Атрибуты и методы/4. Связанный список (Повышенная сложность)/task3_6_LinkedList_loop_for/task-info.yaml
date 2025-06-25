@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 4183
-        length: 49
+        length: 172
         placeholder_text: "# TODO добавьте метод __iter__ из описания задачи"
         initial_state:
           length: 49
@@ -16,10 +16,10 @@ files:
                   print("Вызов метода __iter__")
                   self.current_node = self.head
                   return self
-        selected: false
-        status: Unchecked
-      - offset: 4238
-        length: 49
+        selected: true
+        status: Solved
+      - offset: 4361
+        length: 408
         placeholder_text: "# TODO добавьте метод __next__ из описания задачи"
         initial_state:
           length: 49
@@ -34,10 +34,10 @@ files:
                   current_value = self.current_node.value  # Получаем значение текущего узла
                   self.current_node = self.current_node.next  # Переходим на следующий узел
                   return current_value
-        selected: false
-        status: Unchecked
-      - offset: 4403
-        length: 77
+        selected: true
+        status: Solved
+      - offset: 4885
+        length: 44
         placeholder_text: "# TODO с помощью цикла for распечатать в столбик все значен\
       ия связного списка"
         initial_state:
@@ -47,8 +47,8 @@ files:
         encrypted_possible_answer: |-
           for node in linked_list:
                   print(node)
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -59,5 +59,8 @@ files:
   - name: node.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jun 2025 16:52:29 UTC"
 record: -1

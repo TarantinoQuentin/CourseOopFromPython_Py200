@@ -1,5 +1,5 @@
 from typing import Any, Optional
-
+from itertools import pairwise
 
 class Node:
     """ Класс, который описывает узел связного списка. """
@@ -19,7 +19,7 @@ class Node:
         return f"Node({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
 
     def __str__(self) -> str:
-        ...  # TODO метод должен возвращать значение текущего узла
+        return f'{self.value}'
 
     def is_valid(self, node: Any) -> None:
         """
@@ -54,6 +54,10 @@ if __name__ == "__main__":
     print(list_nodes)  # [Node(0, None), Node(1, None), Node(2, None), Node(3, None), Node(4, None)]
     print(list_nodes[0])  # 0
 
-    # TODO реализуйте алгоритм, который свяжет между собой узлы в списке
+    for index, node in enumerate(list_nodes[:-1]):
+        linked_nodes(node, list_nodes[index + 1])
+
+    # for one, two in pairwise(list_nodes):
+    #     linked_nodes(one, two)
 
     print(list_nodes)  # [Node(0, Node(1)), Node(1, Node(2)), Node(2, Node(3)), Node(3, Node(4)), Node(4, None)]

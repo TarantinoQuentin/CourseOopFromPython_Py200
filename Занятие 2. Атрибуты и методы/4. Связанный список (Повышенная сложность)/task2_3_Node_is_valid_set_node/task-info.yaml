@@ -9,8 +9,8 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 399
-        length: 68
+      - offset: 423
+        length: 20
         placeholder_text: "# TODO установить значение следующего узла с помощью метода\
       \ set_next"
         initial_state:
@@ -20,10 +20,10 @@ files:
         encrypted_possible_answer: |-
           self.next = None
                   self.set_next(next_)
-        selected: false
-        status: Unchecked
-      - offset: 758
-        length: 62
+        selected: true
+        status: Solved
+      - offset: 734
+        length: 74
         placeholder_text: "...  # TODO реализуйте проверку корректности связываемого у\
       зла"
         initial_state:
@@ -33,10 +33,10 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(node, (Node, type(None))):
                       raise TypeError(f"Некорректный тип узла: ожидался 'Node' или 'None', получен {type(node).__name__}")
-        selected: false
-        status: Unchecked
-      - offset: 1029
-        length: 100
+        selected: true
+        status: Solved
+      - offset: 1008
+        length: 55
         placeholder_text: "# TODO метод должен проверить корректность узла (метод is_valid)\
       \ и установить значение атрибуту next"
         initial_state:
@@ -46,10 +46,10 @@ files:
         encrypted_possible_answer: |-
           self.is_valid(next_)
                   self.next = next_  # Устанавливаем следующий узел
-        selected: false
-        status: Unchecked
-      - offset: 1163
-        length: 82
+        selected: true
+        status: Solved
+      - offset: 1096
+        length: 46
         placeholder_text: "# TODO инициализируйте узел first_node со значением 1 и second_node\
       \ со значением 2"
         initial_state:
@@ -59,18 +59,21 @@ files:
         encrypted_possible_answer: |-
           first_node = Node(1)
               second_node = Node(2)
-        selected: false
-        status: Unchecked
-      - offset: 1251
-        length: 36
+        selected: true
+        status: Solved
+      - offset: 1148
+        length: 32
         placeholder_text: "# TODO свяжите первый узел со вторым"
         initial_state:
           length: 36
           offset: 1251
         initialized_from_dependency: false
         encrypted_possible_answer: first_node.set_next(second_node)
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 23 Jun 2025 16:48:19 UTC"
 record: -1

@@ -110,7 +110,16 @@ class LinkedList:
 
         self.len -= 1
 
-    # TODO  добавьте метод __contains__ из описания задачи
+    def __contains__(self, value: Any) -> bool:
+        """Метод для поддержки оператора in."""
+        print(f"Вызов метода __contains__, запросили сравнение с value={value}")
+
+        current = self.head
+        while current is not None:
+            if current.value == value:
+                return True
+            current = current.next
+        return False
 
 
 if __name__ == '__main__':

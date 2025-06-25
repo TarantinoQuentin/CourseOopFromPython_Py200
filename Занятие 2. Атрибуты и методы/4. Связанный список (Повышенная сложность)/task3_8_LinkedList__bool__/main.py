@@ -136,7 +136,10 @@ class LinkedList:
         self.current_node = self.current_node.next  # Переходим на следующий узел
         return current_value
 
-    # TODO добавьте метод __bool__ из описания задачи
+    def __bool__(self) -> bool:
+        """Возвращает True, если список непустой, и False, если пустой."""
+        print("Вызов метода __bool__")
+        return self.head is not None
 
 
 if __name__ == "__main__":

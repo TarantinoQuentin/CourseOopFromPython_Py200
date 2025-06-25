@@ -106,14 +106,29 @@ class LinkedList:
         в конец текущего связного списка.
         """
         print(f"Вызов метода __add__, запросили добавление other={other}")
-        # TODO реализуйте метод
+        if isinstance(other, Node):
+            self.step_by_step_on_nodes(self.len - 1).next = other
+        elif isinstance(other, LinkedList):
+            self.extend(other)
+        else:
+            raise TypeError()
+        self.len += 1
+        return self
 
     def __sub__(self, node: Node) -> 'LinkedList':
         """
         Метод удаляет указанный узел (Node) из связанного списка, если он существует.
         """
         print(f"Вызов метода __sub__, запросили удаление node={node}")
-        # TODO реализуйте метод
+        current_node = self.head
+        for i in range(self.len - 1):
+            if current_node.value == node.value:
+                previous_node = self.step_by_step_on_nodes(i - 1)
+                previous_node.next = current_node.next
+                self.len -= 1
+                return self
+            current_node = current_node.next
+        raise ValueError('Узел не найден')
 
 
 if __name__ == "__main__":

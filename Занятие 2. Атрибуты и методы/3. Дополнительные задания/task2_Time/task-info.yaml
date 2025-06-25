@@ -3,26 +3,26 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 330
-        length: 40
+      - offset: 346
+        length: 60
         placeholder_text: "...  # TODO реализуйте проверку \"меньше\""
         initial_state:
           length: 40
           offset: 330
         initialized_from_dependency: false
         encrypted_possible_answer: "return (self.hour, self.minute) < (other.hour, other.minute)"
-        selected: false
-        status: Unchecked
-      - offset: 409
-        length: 50
+        selected: true
+        status: Solved
+      - offset: 461
+        length: 62
         placeholder_text: "...  # TODO реализуйте проверку \"меньше или равно\""
         initial_state:
           length: 50
           offset: 409
         initialized_from_dependency: false
         encrypted_possible_answer: "return (self.hour, self.minute) <= (other.hour, other.minute)"
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -33,5 +33,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 23 Jun 2025 16:09:11 UTC"
 record: -1

@@ -4,37 +4,37 @@ files:
     visible: true
     placeholders:
       - offset: 515
-        length: 44
+        length: 11
         placeholder_text: "...  # TODO создайте узел со значением value"
         initial_state:
           length: 44
           offset: 515
         initialized_from_dependency: false
         encrypted_possible_answer: Node(value)
-        selected: false
-        status: Unchecked
-      - offset: 667
-        length: 49
+        selected: true
+        status: Solved
+      - offset: 634
+        length: 23
         placeholder_text: "...  # TODO установите головной узел как new_node"
         initial_state:
           length: 49
           offset: 667
         initialized_from_dependency: false
         encrypted_possible_answer: self.head = append_node
-        selected: false
-        status: Unchecked
-      - offset: 753
-        length: 46
+        selected: true
+        status: Solved
+      - offset: 694
+        length: 9
         placeholder_text: "...  # TODO установить значение головного узла"
         initial_state:
           length: 46
           offset: 753
         initialized_from_dependency: false
         encrypted_possible_answer: self.head
-        selected: false
-        status: Unchecked
-      - offset: 923
-        length: 65
+        selected: true
+        status: Solved
+      - offset: 827
+        length: 12
         placeholder_text: "...  # TODO как текущее значение используем соседа (current.next)"
         initial_state:
           length: 65
@@ -42,9 +42,9 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: current.next
         selected: false
-        status: Unchecked
-      - offset: 1306
-        length: 59
+        status: Solved
+      - offset: 1157
+        length: 51
         placeholder_text: "...  # TODO реализуйте добавления элементов в конец в цикле"
         initial_state:
           length: 59
@@ -53,8 +53,8 @@ files:
         encrypted_possible_answer: |-
           for item in iterable:
                       self.append(item)
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -65,5 +65,8 @@ files:
   - name: node.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jun 2025 18:01:09 UTC"
 record: -1

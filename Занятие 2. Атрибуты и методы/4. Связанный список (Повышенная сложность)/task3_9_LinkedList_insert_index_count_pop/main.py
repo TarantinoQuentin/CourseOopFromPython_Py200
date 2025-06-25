@@ -87,22 +87,60 @@ class LinkedList:
 
     def insert(self, index: int, value: Any) -> None:
         """Вставляет новый узел с заданным значением в указанную позицию списка."""
-        ...  # TODO реализуйте метод
+        item_to_insert = Node(value)
+        if index > self.len:
+            previous_item = self.step_by_step_on_nodes(self.len - 1)
+            self.linked_nodes(previous_item, item_to_insert)
+        elif index < 0:
+            self.linked_nodes(Node(value), self.head)
+        else:
+            next_item = self.step_by_step_on_nodes(index)
+            previous_item = self.step_by_step_on_nodes(index - 1)
+            self.linked_nodes(previous_item, item_to_insert)
+            self.linked_nodes(item_to_insert, next_item)
+        self.len += 1
 
     def index(self, value: Any) -> int:
         """Возвращает индекс первого узла со значением, равным value."""
-        ...  # TODO реализуйте метод
+        current_item = self.head
+        index = 0
+        while current_item is not None:
+            if current_item.value == value:
+                return index
+            index += 1
+            current_item = current_item.next
+        raise ValueError
 
     def count(self, value: Any) -> int:
         """Возвращает количество узлов со значением, равным value."""
-        ...  # TODO реализуйте метод
+        current_item = self.head
+        contained_count = 0
+        while current_item is not None:
+            if current_item.value == value:
+                contained_count += 1
+            current_item = current_item.next
+        return contained_count
 
     def pop(self, index: int = None) -> Any:
         """
         Удаляет и возвращает узел по указанному индексу.
         Если индекс не указан, удаляет и возвращает последний элемент.
         """
-        ...  # TODO реализуйте метод
+        if index is not None and not 0 <= index < self.len:
+            raise IndexError()
+        if index:
+            deleted_item = self.step_by_step_on_nodes(index)
+            previous_item = self.step_by_step_on_nodes(index - 1)
+            next_item = self.step_by_step_on_nodes(index + 1)
+            self.linked_nodes(previous_item, next_item)
+        else:
+            last_index = self.len - 1
+            deleted_item = self.step_by_step_on_nodes(last_index)
+            previous_item = self.step_by_step_on_nodes(last_index - 1)
+            self.linked_nodes(previous_item, None)
+        self.len -= 1
+        return deleted_item
+
 
 
 if __name__ == "__main__":

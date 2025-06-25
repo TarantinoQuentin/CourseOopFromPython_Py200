@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 371
-        length: 68
+        length: 44
         placeholder_text: "# TODO инициализировать атрибуты value и next экземпляра кл\
       асса Node"
         initial_state:
@@ -14,10 +14,10 @@ files:
         encrypted_possible_answer: |-
           self.value = value
                   self.next = next_
-        selected: false
-        status: Unchecked
-      - offset: 445
-        length: 60
+        selected: true
+        status: Solved
+      - offset: 421
+        length: 77
         placeholder_text: "# TODO реализовать метод __repr__ для отображения экземпляр\
       а"
         initial_state:
@@ -27,30 +27,30 @@ files:
         encrypted_possible_answer: |-
           def __repr__(self):
                   return f"Node({self.value}, {self.next})"
-        selected: false
-        status: Unchecked
-      - offset: 552
-        length: 55
+        selected: true
+        status: Solved
+      - offset: 545
+        length: 7
         placeholder_text: "...  # TODO инициализировать первый узел со значением 1"
         initial_state:
           length: 55
           offset: 552
         initialized_from_dependency: false
         encrypted_possible_answer: Node(1)
-        selected: false
-        status: Unchecked
-      - offset: 627
-        length: 55
+        selected: true
+        status: Solved
+      - offset: 572
+        length: 7
         placeholder_text: "...  # TODO инициализировать второй узел со значением 2"
         initial_state:
           length: 55
           offset: 627
         initialized_from_dependency: false
         encrypted_possible_answer: Node(2)
-        selected: false
-        status: Unchecked
-      - offset: 705
-        length: 78
+        selected: true
+        status: Solved
+      - offset: 602
+        length: 11
         placeholder_text: "...  # TODO через атрибут экземпляра устанавливаем первому\
       \ узлу следующий узел"
         initial_state:
@@ -58,8 +58,8 @@ files:
           offset: 705
         initialized_from_dependency: false
         encrypted_possible_answer: second_node
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -67,5 +67,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 23 Jun 2025 16:17:45 UTC"
 record: -1

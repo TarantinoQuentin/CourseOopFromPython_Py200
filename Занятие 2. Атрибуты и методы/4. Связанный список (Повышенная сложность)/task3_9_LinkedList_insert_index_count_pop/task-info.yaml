@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 2835
-        length: 28
+      - offset: 2827
+        length: 551
         placeholder_text: "...  # TODO реализуйте метод"
         initial_state:
           length: 28
@@ -29,10 +29,10 @@ files:
                       self.linked_nodes(prev_node, new_node)
           
                   self.len += 1
-        selected: false
-        status: Unchecked
-      - offset: 2986
-        length: 28
+        selected: true
+        status: Solved
+      - offset: 3501
+        length: 248
         placeholder_text: "...  # TODO реализуйте метод"
         initial_state:
           length: 28
@@ -45,10 +45,10 @@ files:
                           return i
                       current = current.next
                   raise ValueError(f"{value} не содержится в списке")
-        selected: false
-        status: Unchecked
-      - offset: 3134
-        length: 28
+        selected: true
+        status: Solved
+      - offset: 3869
+        length: 249
         placeholder_text: "...  # TODO реализуйте метод"
         initial_state:
           length: 28
@@ -62,10 +62,10 @@ files:
                           count += 1
                       current = current.next
                   return count
-        selected: false
-        status: Unchecked
-      - offset: 3369
-        length: 28
+        selected: true
+        status: Solved
+      - offset: 4316
+        length: 645
         placeholder_text: "...  # TODO реализуйте метод"
         initial_state:
           length: 28
@@ -89,8 +89,8 @@ files:
           
                   self.len -= 1
                   return value
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -104,5 +104,8 @@ files:
   - name: node.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jun 2025 18:09:03 UTC"
 record: -1

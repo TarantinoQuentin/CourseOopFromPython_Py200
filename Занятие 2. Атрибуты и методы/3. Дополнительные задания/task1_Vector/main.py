@@ -9,14 +9,14 @@ class Vector:
     def __add__(self, other):
         return Vector(self.x + other.x, self.y + other.y)
 
-    def __sub__(self, other):
-        ... # TODO реализуйте вычитание
+    def __sub__(self, other: 'Vector') -> 'Vector':
+        return Vector(self.x - other.x, self.y - other.y)
 
-    def __mul__(self, other):
-        ... # TODO реализуйте умножение
+    def __mul__(self, other: 'Vector') -> 'Vector':
+        return Vector(self.x * other.x, self.y * other.y)
 
-    def __truediv__(self, other):
-        ... # TODO реализуйте деление
+    def __truediv__(self, other: 'Vector') -> 'Vector':
+        return Vector(self.x / other.x, self.y / other.y)
 
 
 if __name__ == "__main__":

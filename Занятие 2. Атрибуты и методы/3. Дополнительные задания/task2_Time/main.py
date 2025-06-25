@@ -9,11 +9,11 @@ class Time:
     def __eq__(self, other):
         return self.hour == other.hour and self.minute == other.minute
 
-    def __lt__(self, other):
-        ...  # TODO реализуйте проверку "меньше"
+    def __lt__(self, other: 'Time') -> bool:
+        return self.hour < other.hour and self.minute < other.minute
 
-    def __le__(self, other):
-        ...  # TODO реализуйте проверку "меньше или равно"
+    def __le__(self, other: 'Time') -> bool:
+        return self.hour <= other.hour and self.minute <= other.minute
 
 
 if __name__ == "__main__":

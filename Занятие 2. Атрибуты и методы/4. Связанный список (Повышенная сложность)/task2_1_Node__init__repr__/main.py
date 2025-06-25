@@ -10,16 +10,19 @@ class Node:
         :param value: Любое значение, которое помещено в узел
         :param next_: следующий узел, если он есть
         """
-        # TODO инициализировать атрибуты value и next экземпляра класса Node
+        self.value = value
+        self.next = next_
 
-    # TODO реализовать метод __repr__ для отображения экземпляра
+    def __repr__(self) -> str:
+        return f'Node({self.value}, {self.next})'
+
 
 
 if __name__ == '__main__':
-    first_node = ...  # TODO инициализировать первый узел со значением 1
+    first_node = Node(1)
 
-    second_node = ...  # TODO инициализировать второй узел со значением 2
-    first_node.next = ...  # TODO через атрибут экземпляра устанавливаем первому узлу следующий узел
+    second_node = Node(2)
+    first_node.next = second_node
 
     print(first_node)
     print(second_node)
