@@ -1,15 +1,20 @@
 class User:
     def __init__(self, username: str, password: str, address: str):
         self.username = username
-        # TODO создайте приватные атрибуты для пароля и адреса
+        self.__password = password
+        self.__address = address
 
     @staticmethod
     def check_permission(role: str) -> bool:
         """Простая проверка роли для доступа к конфиденциальным данным"""
-        # TODO если роль 'admin', то вернуть True
+        if role == 'admin':
+            return True
+        return False
 
     def get_password(self, role: str) -> str:
-        ...  # TODO провести проверку доступа по роли, если прошла, то вернуть пароль, если не прошел проверку, то вызвать исключение PermissionError с текстом 'Доступ запрещен'
+        if self.check_permission(role):
+            return self.__password
+        raise PermissionError('Доступ запрещен')
 
     def get_address(self, role: str) -> str:
         if self.check_permission(role):
