@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 163
-        length: 91
+      - offset: 155
+        length: 171
         placeholder_text: "# TODO сделайте так, чтобы __repr__ сам подстраивался под а\
       трибуты что есть у него в классе"
         initial_state:
@@ -16,8 +16,8 @@ files:
                   for attr, value in self.__dict__.items():
                       data += attr + '=' + repr(value) + ', '
                   return data[:-2] + ')'
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -28,5 +28,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 29 Jun 2025 08:11:34 UTC"
 record: -1

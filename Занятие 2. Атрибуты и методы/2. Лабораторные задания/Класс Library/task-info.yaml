@@ -41,7 +41,7 @@ files:
         encrypted_possible_answer: pass
         selected: false
         status: Solved
-      - offset: 1280
+      - offset: 1325
         length: 26
         placeholder_text: "pass # TODO дописать метод"
         initial_state:

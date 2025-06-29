@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 388
-        length: 62
+        length: 14
         placeholder_text: "...  # TODO c помощью super вызвать метод area базового кла\
       сса"
         initial_state:
@@ -12,8 +12,8 @@ files:
           offset: 388
         initialized_from_dependency: false
         encrypted_possible_answer: super().area()
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -21,5 +21,8 @@ files:
   - name: tests/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 28 Jun 2025 09:56:46 UTC"
 record: -1

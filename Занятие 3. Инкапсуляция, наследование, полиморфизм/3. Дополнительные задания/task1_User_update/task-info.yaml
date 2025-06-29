@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 621
-        length: 134
+        length: 208
         placeholder_text: "...  # TODO  self.permissions это словарь с разрешениями на\
       \ действия (action) проверьте есть ли соответствующее разрешение на действие"
         initial_state:
@@ -12,10 +12,10 @@ files:
           offset: 621
         initialized_from_dependency: false
         encrypted_possible_answer: "return self.permissions.get(action, False)"
-        selected: false
-        status: Unchecked
-      - offset: 1287
-        length: 250
+        selected: true
+        status: Solved
+      - offset: 1361
+        length: 361
         placeholder_text: "...  # TODO Проверьте есть ли у пользователя право на просм\
       отр пароля, это действие называется 'view_password'. У атрибута role проверь\
       те метод has_permission. Если такое разрешение есть, то верните пароль, если\
@@ -29,10 +29,10 @@ files:
                       return self.__password
                   else:
                       raise PermissionError("Доступ запрещен к паролю")
-        selected: false
-        status: Unchecked
-      - offset: 1799
-        length: 112
+        selected: true
+        status: Solved
+      - offset: 1984
+        length: 219
         placeholder_text: "...  # TODO Произведите аналогичные манипуляции как и в мет\
       оде get_password только для разрешения 'view_address'"
         initial_state:
@@ -44,8 +44,8 @@ files:
                       return self.__address
                   else:
                       raise PermissionError("Доступ запрещен к адресу")
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -56,5 +56,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 29 Jun 2025 07:53:11 UTC"
 record: -1

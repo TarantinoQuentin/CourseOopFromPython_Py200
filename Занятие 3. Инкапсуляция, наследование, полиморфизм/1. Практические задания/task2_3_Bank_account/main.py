@@ -40,7 +40,10 @@ class SavingsAccount(BankAccount):
         rate — это процентная ставка (в десятичных дробях).
         Например, если процентная ставка 5%, то передается значение 0.05
         """
-        ...  # TODO реализуйте метод
+        if rate <= 0:
+            raise ValueError
+        interest = self.get_balance() * rate
+        self.deposit(interest)
 
 
 class CheckingAccount(BankAccount):
@@ -53,7 +56,10 @@ class CheckingAccount(BankAccount):
         """
         amount - сумма для вывода
         """
-        ...  # TODO Реализуйте метод
+        total_amount = self.get_balance() - (amount + amount * self.__commission)
+        if total_amount > self.get_balance():
+            raise ValueError('Недостаточно средств')
+        self._set_balance(total_amount)
 
 
 if __name__ == "__main__":

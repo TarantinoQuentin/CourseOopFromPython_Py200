@@ -6,7 +6,10 @@ class Book:
         self.year = year
 
     def __repr__(self):
-        # TODO сделайте так, чтобы __repr__ сам подстраивался под атрибуты что есть у него в классе
+        result = f'{self.__class__.__name__}('
+        for key, value in self.__dict__.items():
+            result += f'{key}={value!r}, '
+        return result[:-2] + ')'
 
 
 class EBook(Book):
