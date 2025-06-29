@@ -180,14 +180,11 @@ class Newspaper(LibraryItem):
         """
         # написать метод валидации
         if not isinstance(publication_date, str):
-            raise TypeError
+            raise TypeError('Неверное значение даты')
         if not '.' in publication_date:
-            raise ValueError
-        new_date_list = []
-        for value in publication_date.split('.'):
-            new_date_list.append(int(value))
-        day, month, year = new_date_list
-        datetime.date(day=day, month=month,year=year)
+            raise ValueError('Неверное значение даты')
+        day, month, year = publication_date.split('.')
+        datetime.date(day=int(day), month=int(month),year=int(year))
 
     # добавьте свойство publication_date (на чтение)
     @property

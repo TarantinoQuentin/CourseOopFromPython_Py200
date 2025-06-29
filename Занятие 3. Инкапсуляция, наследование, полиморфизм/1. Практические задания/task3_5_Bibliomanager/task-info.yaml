@@ -219,7 +219,7 @@ files:
         selected: true
         status: Solved
       - offset: 5946
-        length: 390
+        length: 349
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
           length: 36
@@ -233,7 +233,7 @@ files:
                   datetime.date(day=int(date[0]), month=int(date[1]), year=int(date[2]))
         selected: true
         status: Solved
-      - offset: 6342
+      - offset: 6301
         length: 133
         placeholder_text: "# TODO добавьте свойство publication_date (на чтение)"
         initial_state:
@@ -246,7 +246,7 @@ files:
                   return self.__publication_date
         selected: true
         status: Solved
-      - offset: 6481
+      - offset: 6440
         length: 297
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для газеты (Газета: 'Название газеты',  Дата выпуска:\
