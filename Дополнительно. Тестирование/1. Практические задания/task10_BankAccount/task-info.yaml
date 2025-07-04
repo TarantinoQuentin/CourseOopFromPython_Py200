@@ -4,17 +4,17 @@ files:
     visible: true
     placeholders:
       - offset: 1169
-        length: 59
+        length: 108
         placeholder_text: "# TODO проверьте что в атрибут баланса всё верно записалось"
         initial_state:
           length: 59
           offset: 1169
         initialized_from_dependency: false
         encrypted_possible_answer: "self.assertEqual(account.get_balance(), 1000)"
-        selected: false
-        status: Unchecked
-      - offset: 1327
-        length: 91
+        selected: true
+        status: Solved
+      - offset: 1376
+        length: 169
         placeholder_text: "# TODO добавьте 500 единиц к балансу и проверьте что в атри\
       бут баланса всё верно записалось"
         initial_state:
@@ -24,10 +24,10 @@ files:
         encrypted_possible_answer: |-
           account.deposit(500)
                   self.assertEqual(account.get_balance(), 1500)
-        selected: false
-        status: Unchecked
-      - offset: 1517
-        length: 76
+        selected: true
+        status: Solved
+      - offset: 1644
+        length: 149
         placeholder_text: "# TODO проверьте что вызывается ошибка при добавлении отриц\
       ательного баланса"
         initial_state:
@@ -37,10 +37,10 @@ files:
         encrypted_possible_answer: |-
           with self.assertRaises(ValueError):
                       account.deposit(-500)
-        selected: false
-        status: Unchecked
-      - offset: 1694
-        length: 80
+        selected: true
+        status: Solved
+      - offset: 1894
+        length: 158
         placeholder_text: "# TODO снимите 500 единиц и проверьте что в атрибут баланса\
       \ всё верно записалось"
         initial_state:
@@ -50,10 +50,10 @@ files:
         encrypted_possible_answer: |-
           account.withdraw(500)
                   self.assertEqual(account.get_balance(), 500)
-        selected: false
-        status: Unchecked
-      - offset: 1877
-        length: 55
+        selected: true
+        status: Solved
+      - offset: 2155
+        length: 129
         placeholder_text: "# TODO проверьте, что нельзя снять 1500 единиц со счета"
         initial_state:
           length: 55
@@ -62,10 +62,10 @@ files:
         encrypted_possible_answer: |-
           with self.assertRaises(ValueError):
                       account.withdraw(1500)
-        selected: false
-        status: Unchecked
-      - offset: 2040
-        length: 45
+        selected: true
+        status: Solved
+      - offset: 2392
+        length: 116
         placeholder_text: "# TODO проверьте, что нельзя снять 0 со счета"
         initial_state:
           length: 45
@@ -74,22 +74,22 @@ files:
         encrypted_possible_answer: |-
           with self.assertRaises(ValueError):
                       account.withdraw(0)
-        selected: false
-        status: Unchecked
-      - offset: 2175
-        length: 55
+        selected: true
+        status: Solved
+      - offset: 2598
+        length: 114
         placeholder_text: "# TODO  проверьте доступность получения номера аккаунта"
         initial_state:
           length: 55
           offset: 2175
         initialized_from_dependency: false
         encrypted_possible_answer: "self.assertEqual(account.get_account_number(), '12345')"
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
 record: -1
 post_submission_on_open: true

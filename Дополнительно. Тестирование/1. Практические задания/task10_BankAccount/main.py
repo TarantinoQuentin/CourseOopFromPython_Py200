@@ -37,31 +37,43 @@ class TestBankAccount(unittest.TestCase):
 
     def test_initial_balance(self):
         account = BankAccount('12345', 1000)
-        # TODO проверьте что в атрибут баланса всё верно записалось
+        # проверьте что в атрибут баланса всё верно записалось
+        self.assertEqual(account.get_balance(), 1000)
 
     def test_deposit_positive_amount(self):
         account = BankAccount('12345', 1000)
-        # TODO добавьте 500 единиц к балансу и проверьте что в атрибут баланса всё верно записалось
+        # добавьте 500 единиц к балансу и проверьте что в атрибут баланса всё верно записалось
+        account.deposit(500)
+        self.assertEqual(account.get_balance(), 1500)
 
     def test_deposit_negative_amount(self):
         account = BankAccount('12345', 1000)
-        # TODO проверьте что вызывается ошибка при добавлении отрицательного баланса
+        # проверьте что вызывается ошибка при добавлении отрицательного баланса
+        with self.assertRaises(ValueError):
+            account.deposit(-100)
 
     def test_withdraw_sufficient_funds(self):
         account = BankAccount('12345', 1000)
-        # TODO снимите 500 единиц и проверьте что в атрибут баланса всё верно записалось
+        # снимите 500 единиц и проверьте что в атрибут баланса всё верно записалось
+        account.withdraw(500)
+        self.assertEqual(account.get_balance(), 500)
 
     def test_withdraw_insufficient_funds(self):
         account = BankAccount('12345', 1000)
-        # TODO проверьте, что нельзя снять 1500 единиц со счета
+        # проверьте, что нельзя снять 1500 единиц со счета
+        with self.assertRaises(ValueError):
+            account.withdraw(1500)
 
     def test_withdraw_zero_or_negative_amount(self):
         account = BankAccount('12345', 1000)
-        # TODO проверьте, что нельзя снять 0 со счета
+        # проверьте, что нельзя снять 0 со счета
+        with self.assertRaises(ValueError):
+            account.withdraw(0)
 
     def test_account_number(self):
         account = BankAccount('12345', 1000)
-        # TODO  проверьте доступность получения номера аккаунта
+        #  проверьте доступность получения номера аккаунта
+        self.assertEqual(account.get_account_number(), '12345')
 
 
 if __name__ == '__main__':
