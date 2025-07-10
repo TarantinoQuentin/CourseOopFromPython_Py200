@@ -8,10 +8,6 @@ class MyTestCase(unittest.TestCase):
     def setUpClass(cls):
         cls.book = AudioBook('Книга', 'Автор', 3.30)
 
-    @classmethod
-    def tearDownClass(cls):
-        cls.book.clear()
-
     def test_get_name(self):
         self.assertEqual(self.book.name, 'Книга')
 
@@ -19,12 +15,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.book.author, 'Автор')
 
     def test_set_name(self):
-        self.book.name('Новая книга')
+        self.book.name = 'Новая книга'
         self.assertEqual(self.book.name, 'Новая книга')
 
     def test_set_name_error(self):
-        with self.assertRaises(ValueError):
-            self.book.name(123)
+        with self.assertRaises(TypeError):
+            self.book.name = 123
 
     def test_validate_duration_error(self):
         with self.assertRaises(TypeError):

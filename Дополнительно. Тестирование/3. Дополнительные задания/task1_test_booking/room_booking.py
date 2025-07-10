@@ -39,24 +39,24 @@ class SingleRoom(Room):
     """
     Класс для одноместного номера
     """
-    def __init__(self, room_number, price_per_night):
-        super().__init__(room_number, price_per_night)
+    # def __init__(self, room_number, price_per_night):
+    #     super().__init__(room_number, price_per_night)
 
 
 class DoubleRoom(Room):
     """
     Класс для двухместного номера
     """
-    def __init__(self, room_number, price_per_night):
-        super().__init__(room_number, price_per_night)
+    # def __init__(self, room_number, price_per_night):
+    #     super().__init__(room_number, price_per_night)
 
 
 class Suite(Room):
     """
     Класс для люксового номера
     """
-    def __init__(self, room_number, price_per_night):
-        super().__init__(room_number, price_per_night)
+    # def __init__(self, room_number, price_per_night):
+    #     super().__init__(room_number, price_per_night)
 
     def calculate_price(self, nights):
         # Дополнительная наценка для люксовых номеров
