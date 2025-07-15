@@ -50,13 +50,19 @@ class ProductRepository:
         self.products = {}  # Используем словарь для хранения продуктов по их ID
 
     def add_product(self, product):
-        ...  # TODO реализация для добавления продукта в репозиторий
+        if product.product_id in self.products:
+            raise ValueError('Продукт уже добавлен.')
+        self.products[product.product_id] = product
 
     def update_product(self, product):
-        ...  # TODO реализация для обновления продукта в репозитории
+        if product.product_id not in self.products:
+            raise ValueError('Продукт не найден.')
+        self.products[product.product_id] = product
 
     def get_product(self, product_id):
-        ...  # TODO реализация для извлечения продукта из репозитория
+        if product_id not in self.products:
+            raise ValueError('Продукт не найден.')
+        return self.products[product_id]
 
 
 class OrderRepository:
@@ -64,10 +70,14 @@ class OrderRepository:
         self.orders = {}  # Используем словарь для хранения заказов по их ID
 
     def place_order(self, order):
-        ...  # TODO реализация для размещения заказа в репозитории
+        if order.order_id in self.orders:
+            raise ValueError('Заказ уже размещен.')
+        self.orders[order.order_id] = order
 
     def get_order(self, order_id):
-        ...  # TODO реализация для извлечения заказа из репозитория
+        if order_id not in self.orders:
+            raise ValueError('Заказ не найден.')
+        return self.orders[order_id]
 
 
 # Реализация принципа инверсии зависимостей путем введения классов репозитория в качестве зависимостей

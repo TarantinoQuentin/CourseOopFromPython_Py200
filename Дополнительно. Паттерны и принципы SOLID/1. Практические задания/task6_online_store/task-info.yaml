@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 1174
-        length: 60
+      - offset: 1165
+        length: 154
         placeholder_text: "...  # TODO реализация для добавления продукта в репозитори\
       й"
         initial_state:
@@ -15,10 +15,10 @@ files:
           if product.product_id in self.products:
                       raise ValueError("Продукт с таким ID уже существует.")
                   self.products[product.product_id] = product
-        selected: false
-        status: Unchecked
-      - offset: 1283
-        length: 60
+        selected: true
+        status: Solved
+      - offset: 1368
+        length: 146
         placeholder_text: "...  # TODO реализация для обновления продукта в репозитори\
       и"
         initial_state:
@@ -29,10 +29,10 @@ files:
           if product.product_id not in self.products:
                       raise ValueError("Продукт с таким ID не найден.")
                   self.products[product.product_id] = product
-        selected: false
-        status: Unchecked
-      - offset: 1392
-        length: 61
+        selected: true
+        status: Solved
+      - offset: 1563
+        length: 127
         placeholder_text: "...  # TODO реализация для извлечения продукта из репозитор\
       ия"
         initial_state:
@@ -43,10 +43,10 @@ files:
           if product_id not in self.products:
                       raise ValueError(f"Продукт с ID {product_id} не найден.")
                   return self.products[product_id]
-        selected: false
-        status: Unchecked
-      - offset: 1623
-        length: 58
+        selected: true
+        status: Solved
+      - offset: 1860
+        length: 129
         placeholder_text: "...  # TODO реализация для размещения заказа в репозитории"
         initial_state:
           length: 58
@@ -56,10 +56,10 @@ files:
           if order.order_id in self.orders:
                       raise ValueError("Заказ с таким ID уже существует.")
                   self.orders[order.order_id] = order
-        selected: false
-        status: Unchecked
-      - offset: 1726
-        length: 59
+        selected: true
+        status: Solved
+      - offset: 2034
+        length: 117
         placeholder_text: "...  # TODO реализация для извлечения заказа из репозитория"
         initial_state:
           length: 59
@@ -69,8 +69,8 @@ files:
           if order_id not in self.orders:
                       raise ValueError(f"Заказ с ID {order_id} не найден.")
                   return self.orders[order_id]
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -81,5 +81,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 15 Jul 2025 17:52:47 UTC"
 record: -1
