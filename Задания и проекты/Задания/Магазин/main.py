@@ -9,16 +9,24 @@ class IdCounter:
     Класс — счетчик ID
     """
 
-    count = 0
+    def __init__(self):
+        self._current_id = 0
 
-    @classmethod
-    def get_id(cls) -> int:
+    @property
+    def current_id(self) -> int:
+        """
+        Метод возвращающий текущий ID
+        :return: значение ID
+        """
+        return self._current_id
+
+    def get_new_id(self) -> int:
         """
         Метод возвращающий следующий ID
         :return: значение ID
         """
-        cls.count += 1
-        return cls.count
+        self._current_id += 1
+        return self.current_id
 
 
 class Password:
@@ -26,46 +34,52 @@ class Password:
     Класс для управления паролями
     """
 
-    def get_hash_password(self, password: str) -> str:
+    @classmethod
+    def get_hash_password(cls, password: str) -> str:
         """
         Метод проверяет соответствие пароля требованиям и возвращает его хэш-значение
-        :raise: возвращает TypeError, если пароль не строкового типа
-        :raise: возвращает ValueError, если пароль не соответствует предъявленным требованиям
         :return: хэш-значение пароля пользователя
         """
+        if cls.is_valid_password(password):
+            password_hash = hashlib.sha256(password.encode()).hexdigest()
+            return password_hash
+        raise ValueError('Значение пароля не соответствует требованиям')
 
+    @classmethod
+    def is_valid_password(cls, password: str) -> bool:
+        """
+        Метод для проверки пароля на соответствие требованиям
+        :param password: пароль пользователя
+        :raise: TypeError, если пароль не строкового типа
+        :raise: ValueError, если пароль не соответствует требованиям
+        :return: True, если пароль прошел проверку
+        """
         if not isinstance(password, str):
             raise TypeError('Пароль должен быть типа str')
-        if re.match(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$', password):
-            password_hash = hashlib.sha256(password.encode()).hexdigest()
-            # hash_dict['password'] = hash_dict
-            return password_hash
-        raise ValueError('Пароль не соответствует требованиям, он должен быть длиной не менее 8 символов и содержать как буквы латиницы, так и цифры')
+        if not re.match(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$', password):
+            raise ValueError('Пароль не соответствует требованиям, он должен быть длиной не менее 8 символов и содержать как буквы латиницы, так и цифры')
+        return True
 
-    def check_password(self, password: str, login: str, user_database: dict) -> bool:
+    @classmethod
+    def check_password(cls, password: str, hashpassword: str) -> bool:
         """
-        Метод для сверки пароля с базой пользователей
+        Метод для сверки пароля с хэш-значением
+        :param hashpassword: передаваемое хэш-значение пароля
         :param password: передаваемый пароль
-        :param login: передаваемый логин
-        :param user_database: база логинов и паролей пользователей
-        :raise: возвращает TypeError, если логин не строкового типа
-        :raise: возвращает ValueError, если пользователь с таким логином не найден
+        :raise: TypeError, если значение пароля не соответствует требованиям
         :return: булево значение
         """
-        if not isinstance(login, str):
-            raise TypeError('Логин пользователя должен быть типа str')
-        if login not in user_database:
-            raise ValueError('Такого пользователя не существует')
-        if user_database[login] == self.get_hash_password(password):
-            return True
-        return False
+        if isinstance(hashpassword, str):
+            return cls.get_hash_password(password) == hashpassword
+        raise TypeError('Хэш-значение пароля не строкового типа')
 
 
-
-class Product(IdCounter):
+class Product:
     """
     Класс продукт
     """
+
+    _id_counter = IdCounter()
 
     def __init__(self, name: str, price: int | float, rating: int | float):
         """
@@ -74,22 +88,65 @@ class Product(IdCounter):
         :param price: цена
         :param rating: рейтинг
         """
-        IdCounter.__init__(self)
-        self._id_ = self.id_
+        self._id_ = self._id_counter.get_new_id()
         self.validate_name(name)
         self._name = name
-        self.validate_price(price)
-        self._price = price
-        self.validate_rating(rating)
-        self._rating = rating
+        self.price = price
+        self.rating = rating
+
+    @property
+    def price(self) -> int|float:
+        """
+        Метод-свойство для получения неизменяемого значения названия цены продукта
+        :return: цена товара
+        """
+        return self._price
+
+    @price.setter
+    def price(self, value: int | float) -> None:
+        """
+        Метод проверяет значение переданной цены и устанавливает ее атрибуту
+        :param value: цена продукта
+        :raise: возвращает TypeError, если значение цены не соответствует типу int или float
+        :raise: возвращает ValueError, если значение отрицательно или равно нулю
+        :return: None
+        """
+        if not isinstance(value, int | float):
+            raise TypeError('Значение цены должно быть типа int или float')
+        if value <= 0:
+            raise ValueError('Значение цены должно быть положительным')
+        self._price = value
+
+    @property
+    def rating(self) -> int|float:
+        """
+        Метод-свойство для получения неизменяемого значения названия рейтинга продукта
+        :return: рейтинг товара
+        """
+        return self._rating
+
+    @rating.setter
+    def rating(self, value: int | float) -> None:
+        """
+        Метод проверяет значение переданного рейтинга и устанавливает его атрибуту
+        :param value: рейтинг продукта
+        :raise: возвращает TypeError, если значение рейтинга не соответствует типу int или float
+        :raise: возвращает ValueError, если значение рейтинга отрицательное или больше 10-ти
+        :return: None
+        """
+        if not isinstance(value, int | float):
+            raise TypeError('Значение рейтинга должно быть типа int или float')
+        if not 0 <= value <= 10:
+            raise ValueError('Значение рейтинга должно быть не более 10-ти, положительным или равно нулю')
+        self._rating = value
 
     @property
     def id_(self) -> int:
         """
-        Метод для определения ID продукта
-        :return: возвращает значение ID вызывая классовый метод IdCounter
+        Метод-свойство для получения неизменяемого значения названия ID продукта
+        :return: возвращает значение ID
         """
-        return super().get_id()
+        return self._id_
 
     def validate_name(self, name: str) -> None:
         """
@@ -100,32 +157,6 @@ class Product(IdCounter):
         """
         if not isinstance(name, str):
             raise TypeError('Название должно быть типа str')
-
-    def validate_price(self, price: int | float) -> None:
-        """
-        Метод проверяет значение переданной цены
-        :param price: цена продукта
-        :raise: возвращает TypeError, если значение цены не соответствует типу int или float
-        :raise: возвращает ValueError, если значение отрицательно или равно нулю
-        :return: None
-        """
-        if not isinstance(price, int | float):
-            raise TypeError('Значение цены должно быть типа int или float')
-        if price <= 0:
-            raise ValueError('Значение цены должно быть положительным')
-
-    def validate_rating(self, rating: int | float) -> None:
-        """
-        Метод проверяет значение переданного рейтинга
-        :param rating: рейтинг продукта
-        :raise: возвращает TypeError, если значение рейтинга не соответствует типу int или float
-        :raise: возвращает ValueError, если значение рейтинга отрицательное
-        :return: None
-        """
-        if not isinstance(rating, int | float):
-            raise TypeError('Значение рейтинга должно быть типа int или float')
-        if rating < 0:
-            raise ValueError('Значение рейтинга должно быть положительным или равно нулю')
 
     @property
     def name(self) -> str:
@@ -139,7 +170,7 @@ class Product(IdCounter):
         return f'{self._id_}_{self.name}'
 
     def __repr__(self):
-        return f'{self.__class__.__name__}(name={self.name!r}, price={self._price}, rating={self._rating})'
+        return f'{self.__class__.__name__}(name={self.name!r}, price={self.price}, rating={self.rating})'
 
 
 class Cart:
@@ -159,7 +190,7 @@ class Cart:
         :return: возвращает список продуктов в корзине пользователя или сообщение о том, что корзина пуста
         """
         if not self._user_cart:
-            return 'Cart is empty'
+            return 'Корзина пуста'
         return self._user_cart
 
     def remove_from_cart(self, product: Product) -> None:
@@ -185,21 +216,12 @@ class Cart:
         self._user_cart.append(product)
 
 
-class User(Cart):
+class User:
     """
     Класс 'Пользователь'
     """
 
-    user_id_count = 0
-
-    @classmethod
-    def get_user_id(cls) -> int:
-        """
-        Метод возвращающий следующий ID
-        :return: значение ID
-        """
-        cls.user_id_count += 1
-        return cls.user_id_count
+    _id_counter = IdCounter()
 
     def __init__(self, username: str, password: str):
         """
@@ -207,20 +229,19 @@ class User(Cart):
         :param username: логин пользователя
         :param password: пароль пользователя
         """
-        Cart.__init__(self)
-        self._id_ = User.user_id_count
+        self._id_ = self._id_counter.get_new_id()
         self.validate_username(username)
         self._username = username
         self._password = Password().get_hash_password(password)
-        self._cart = self.cart
+        self._cart = Cart()
 
     @property
-    def cart(self) -> list[Product | None]:
+    def cart(self) -> Cart:
         """
         Метод возвращает защищенный атрибут — корзину
         :return: корзина пользователя
         """
-        return super().get_user_cart()
+        return self._cart
 
     @property
     def username(self) -> str:
@@ -240,14 +261,14 @@ class User(Cart):
         """
         if not isinstance(username, str):
             raise TypeError('Имя пользователя должно быть типом str')
-        if not re.match(r'^[a-z\d_]+$', username):
+        if not re.match(r'^[A-za-z\d_]+$', username):
             raise ValueError('Имя пользователя может содержать только латиницу, цифры и нижнее подчеркивание')
 
     def __str__(self):
         return f'{self._id_}_{self.username}'
 
     def __repr__(self):
-        return f"User(username={self.username}, password='password1')"
+        return f"{self.__class__.__name__}(username={self.username}, password='password1')"
 
 # Создайте генератор продуктов, чтобы при вызове функции или метода возвращался
 # случайный продукт вашего направления магазина
@@ -273,38 +294,49 @@ class ProductGenerator:
                 price=round(random.randint(*(self.product_source['price_range'])), 2),
                 rating=round(random.randint(*(self.product_source['rating_range'])), 2))
 
-class Store(User, ProductGenerator):
+class Store:
     """
     Класс 'магазин'
     """
 
-    text_username = 'Введите имя пользователя: '
-    text_password = 'Введите пароль: '
-    def __init__(self):
+
+    def __init__(self, product_generator: ProductGenerator):
         """
         Подготовка к работе класса 'магазин'
+        :param product_generator: класс-генератор продуктов
         """
-        User.__init__(self=self, username=input(self.text_username), password=input(self.text_password))
-        ProductGenerator.__init__(self)
+        self.user = None
+        self.product_generator = product_generator
+        self.authentification()
+
+    def authentification(self):
+        while True:
+            username = input('Введите имя пользователя: ')
+            password = input('Введите пароль: ')
+            try:
+                self.user = User(username, password)
+                break
+            except Exception as error:
+                print(error)
 
     def get_random_product_in_cart(self) -> None:
         """
         Метод для добавления случайного продукта в корзину пользователя
         :return: None
         """
-        return super().add_to_cart(super().generate_product())
+        return self.user.cart.add_to_cart(self.product_generator.generate_product())
 
     def view_cart(self):
         """
         Метод для просмотра корзины пользователя
         :return: возвращает список продуктов в корзине пользователя или сообщение о том, что корзина пуста
         """
-        return super().get_user_cart()
+        return self.user.cart.get_user_cart()
 
 
 if __name__ == "__main__":
     # Проверьте функциональность добавления продуктов в корзину и отображения корзины пользователя
-    store = Store()
+    store = Store(ProductGenerator())
     print(store.view_cart())
     store.get_random_product_in_cart()
     print(store.view_cart())
