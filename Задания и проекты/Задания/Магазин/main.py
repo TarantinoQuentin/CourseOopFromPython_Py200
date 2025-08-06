@@ -1,5 +1,4 @@
 import re
-from itertools import count, product
 import hashlib
 import random
 
@@ -334,16 +333,222 @@ class Store:
         return self.user.cart.get_user_cart()
 
 
+class Category:
+    """
+    Класс 'категория' товара
+    """
+
+    def __init__(self, name: str):
+        """
+        Подготовка к работе класса 'категория'
+        :param name: название категории
+        """
+        self.product_list = []
+        self.validate_name(name)
+        self._name = name
+
+    @property
+    def name(self) -> str:
+        """
+        Метод-свойство для возврата названия категории, защищенного от изменения
+        :return: название категории
+        """
+        return self._name
+
+    def get_category_list(self) -> list[Product | None] | str:
+        """
+        Метод для получения списка товаров в категории
+        :return: возвращает список продуктов в категории или сообщение о том, что категория пуста
+        """
+        if not self.product_list:
+            return 'Категория пуста'
+        return self.product_list
+
+    def validate_name(self, name: str) -> None:
+        """
+        Метод для валидации названия категории
+        :param name: название категории
+        :raise: TypeError, если название не строкового типа
+        :return: None
+        """
+        if not isinstance(name, str):
+            raise TypeError('Название категории должно быть строковым типом')
+
+    def remove_from_category(self, product: Product) -> None:
+        """
+        Метод для удаления товара из категории
+        :param product: удаляемый продукт
+        :raise: возвращает ValueError, если товар не найден в категории
+        :return: None
+        """
+        if product not in self.product_list:
+            raise ValueError('Товар не найден в корзине')
+        self.product_list.remove(product)
+
+    def add_to_category(self, product: Product) -> None:
+        """
+        Метод для добавления товара в категорию
+        :param product: добавляемый продукт
+        :raise: ValueError, если добавляемый продукт уже есть в категории
+        :return: None
+        """
+        if product in self.product_list:
+            raise ValueError('Такой продукт уже есть в категории')
+        self.product_list.append(product)
+
+    def __str__(self):
+        return self._name
+
+    def __repr__(self):
+        return f'{self.__class__.__name__}(name={self.name})'
+
+
+class CategoryRepository:
+    """
+    Класс-хранилище категорий товаров
+    """
+
+    def __repr__(self):
+        self.categories_list = []
+
+    def add_category_to_repository(self, category: Category) -> None:
+        """
+        Метод для добавления категории в хранилище
+        :param category: категория товаров
+        :raise: ValueError, если такая категория уже есть в списке
+        :return: None
+        """
+        if category not in self.categories_list:
+            self.categories_list.append(category)
+        else:
+            raise ValueError('Такая категория уже есть в списке')
+
+
+    def get_all_categories(self) -> list[Category | None]:
+        """
+        Метод возвращает список всех категорий товаров в хранилище
+        :return: список категорий
+        """
+        return self.categories_list
+
+    def get_specific_category(self, category_name: str):
+        """
+        Метод возвращает искомую категорию товаров
+        :param category_name: название категории товаров
+        :raise: ValueError, если категория товаров не найдена
+        :return: искомая категория товаров
+        """
+        for category in self.categories_list:
+            if category.name == category_name:
+                return category
+            raise ValueError('Искомая категория не найдена')
+
+
+class CartExtended(Cart):
+    """
+    Улучшенный класс 'корзина'
+    """
+
+    def __init__(self):
+        """
+        Подготовка класса 'расширенная корзина' к работе
+        """
+        super().__init__()
+        self._user_cart = {}
+
+    def add_category_to_cart(self, category: Category) -> None:
+        """
+        Метод для добавления в корзину товаров категориями
+        :param category: категория товаров
+        :raise: ValueError, если категория пуста
+        :return: None
+        """
+        if category.product_list:
+            for product in category.product_list:
+                self.add_to_cart(product)
+        else:
+            raise ValueError('Категория пуста')
+
+    def add_to_cart(self, product: Product) -> None:
+        """
+        Метод для добавления товара в корзину
+        :param product: добавляемый продукт
+        :raise: ValueError, если добавляемый продукт уже есть в корзине
+        :return: None
+        """
+        if product in self._user_cart:
+            self._user_cart[product] += 1
+        self._user_cart[product] = 1
+
+    def remove_from_cart(self, product: Product) -> None:
+        """
+        Метод для удаления товара из корзины
+        :param product: удаляемый продукт
+        :raise: возвращает ValueError, если товар не найден в корзине
+        :return: None
+        """
+        if product not in self._user_cart:
+            raise ValueError('Товар не найден в корзине')
+        self._user_cart.pop(product)
+
+    def change_product_price(self, product: Product, new_value: int | float) -> None:
+        """
+        Метод для изменения цены продукта в корзине
+        :param product: продукт
+        :param new_value: новое значение цены
+        :raise: ValueError, если товар не найден в корзине
+        :return: None
+        """
+        if product in self._user_cart:
+            product.price = new_value
+        else:
+            raise ValueError('Товар не найден')
+
+    def change_product_rating(self, product: Product, new_value: int | float) -> None:
+        """
+        Метод для изменения рейтинга продукта в корзине
+        :param product: продукт
+        :param new_value: новое значение рейтинга
+        :raise: ValueError, если товар не найден в корзине
+        :return: None
+        """
+        if product in self._user_cart:
+            product.rating = new_value
+        else:
+            raise ValueError('Товар не найден')
+
+
+class StoreExtended(Store):
+    """
+    Улучшенный класс 'магазин'
+    """
+
+    def __init__(self, product_generator: ProductGenerator):
+        """
+        Подготовка к работе класса 'улучшенный магазин'
+        """
+        super().__init__(product_generator)
+
+    def change_user(self) -> None:
+        """
+        Метод для смены аккаунта пользователя, выходит из прошлого аккаунта и
+        запускает аутентификацию в следующий
+        :raise: ValueError, если пользователь не аутентифицирован
+        :return: None
+        """
+        if self.user:
+            self.user = None
+            self.authentification()
+        else:
+            raise ValueError('Пользователь не аутентифицирован')
+
+
 if __name__ == "__main__":
     # Проверьте функциональность добавления продуктов в корзину и отображения корзины пользователя
     store = Store(ProductGenerator())
     print(store.view_cart())
     store.get_random_product_in_cart()
     print(store.view_cart())
-    store.get_random_product_in_cart()
-    store.get_random_product_in_cart()
-    store.get_random_product_in_cart()
-    store.get_random_product_in_cart()
-    store.get_random_product_in_cart()
-    store.get_random_product_in_cart()
+    for _ in range(5):
+        store.get_random_product_in_cart()
     print(store.view_cart())
