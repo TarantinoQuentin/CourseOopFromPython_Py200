@@ -1,5 +1,5 @@
 import unittest
-from main import Product, CartExtended, Category, User
+from main import Product, CartExtended, Category, User, Cart
 
 
 class TestProduct(unittest.TestCase):
@@ -262,8 +262,40 @@ class TestUser(unittest.TestCase):
         Метод для создания экземпляра тестируемого класса
         :return: None
         """
+        self.user = User('username', 'pass1234')
+        self.user_cart = Cart()
 
-    # def test_
+    def test_cart(self) -> None:
+        """
+        Метод для тестирования метода, возвращающего объект корзины пользователя
+        :return: None
+        """
+        self.assertTrue(type(self.user.cart), type(self.user_cart))
+
+    def test_username(self) -> None:
+        """
+        Метод для тестирования метода, возвращающего имя пользователя
+        :return: None
+        """
+        self.assertEqual(self.user.username, 'username')
+
+    def test_validate_username_type_error(self) -> None:
+        """
+        Метод для вызова ошибки типа в методе, проверяющем значение имени пользователя,
+        если имя пользователя имеет некорректный тип данных
+        :return: None
+        """
+        with self.assertRaises(TypeError):
+            self.user.validate_username(12345)
+
+    def test_validate_username_value_error(self) -> None:
+        """
+        Метод для вызова ошибки значения в методе, проверяющем значение имени пользователя,
+        если имя пользователя не соответствует требованиям
+        :return: None
+        """
+        with self.assertRaises(ValueError):
+            self.user.validate_username('Имя пользователя')
 
 
 if __name__ == "__main__":
