@@ -14,6 +14,13 @@ class TestProduct(unittest.TestCase):
         """
         self.product = Product('belt', 1000, 10)
 
+    def tearDown(self):
+        """
+        Метод для обнуления счетчика ID
+        :return: None
+        """
+        Product._id_counter._current_id = 0
+
     def test_name(self) -> None:
         """
         Метод для тестирования геттера атрибута 'имя'
@@ -80,8 +87,7 @@ class TestProduct(unittest.TestCase):
         Метод для тестирования геттера атрибута 'ID'
         :return: None
         """
-        self.assertEqual(self.product.id_, self.product.id_)  # к сожалению иначе не проверить, счетчик уже зашкаливает, судя по всему
-        # из-за того, что тест генерирует постоянно экземпляры перед каждым тестом, а как это исправить в коде самого класса не понимаю
+        self.assertEqual(self.product.id_, 1)
 
 class TestCartExtended(unittest.TestCase):
     """
@@ -99,6 +105,13 @@ class TestCartExtended(unittest.TestCase):
         self.product_two = Product('gearbox_oil', 2000, 9)
         self.category.add_to_category(self.product_two)
         self.cart.add_to_cart(self.product_one)
+
+    def tearDown(self):
+        """
+        Метод для обнуления счетчика ID
+        :return: None
+        """
+        Product._id_counter._current_id = 0
 
     def test_get_user_cart(self) -> None:
         """
@@ -154,7 +167,7 @@ class TestCartExtended(unittest.TestCase):
         :return: None
         """
         self.cart.change_product_price(self.product_one, 800)
-        self.assertEqual(*{product.price for product in self.cart.get_user_cart()}, 800)
+        self.assertEqual(self.product_one.price, 800)
 
     def test_change_product_price_error(self) -> None:
         """
@@ -170,7 +183,7 @@ class TestCartExtended(unittest.TestCase):
         :return: None
         """
         self.cart.change_product_rating(self.product_one, 5)
-        self.assertEqual(*{product.rating for product in self.cart.get_user_cart()}, 5)
+        self.assertEqual(self.product_one.rating, 5)
 
     def test_change_product_rating_error(self) -> None:
         """
@@ -193,6 +206,13 @@ class TestCategory(unittest.TestCase):
         """
         self.category = Category('filters')
         self.product = Product('air_filter', 500, 7)
+
+    def tearDown(self):
+        """
+        Метод для обнуления счетчика ID
+        :return: None
+        """
+        Product._id_counter._current_id = 0
 
     def test_name(self) -> None:
         """
@@ -264,6 +284,13 @@ class TestUser(unittest.TestCase):
         """
         self.user = User('username', 'pass1234')
         self.user_cart = Cart()
+
+    def tearDown(self):
+        """
+        Метод для обнуления счетчика ID
+        :return: None
+        """
+        Product._id_counter._current_id = 0
 
     def test_cart(self) -> None:
         """
